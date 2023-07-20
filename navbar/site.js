@@ -1,3 +1,4 @@
+
 function findAncestor(element, selector) {
     try {
         while (element
@@ -11,9 +12,10 @@ function findAncestor(element, selector) {
     }
 }
 
+///+nav
 
 // Get all the anchor elements inside the navigation menu
-const menuItems = document.querySelectorAll('.primary-navigation li a');
+const menuItems = document.querySelectorAll('.primary-nav-list li a');
 
 // Loop through each anchor element
 menuItems.forEach(item => {
@@ -28,11 +30,12 @@ menuItems.forEach(item => {
             }
         });
 
+        // check if it is dropdown anchor element
         if (event.target.classList.contains("dropdown-toggle") === true) {
             // get 
-            event.target.classList.toggle('active');
+            // event.target.classList.toggle('active');
             // event.target.classList.toggle('active-dropdown');
-            item.removeAttribute('aria-current');
+            // item.removeAttribute('aria-current');
         }
         else {
             // Add the 'active' class to the clicked anchor element
@@ -41,20 +44,18 @@ menuItems.forEach(item => {
             event.target.setAttribute('aria-current', "page");
         }
 
-        // add active-dropdown
+        // if it is sub-menu anchor,
+        // add active-dropdown to the ancestor anchor
         const ancestor = findAncestor(event.target, '.dropdown');
         if (ancestor) {
             const a = ancestor.querySelector('.dropdown-toggle')
             a.classList.add('active-dropdown');
+            // a.setAttribute('aria-current', "page");
         }
-
-
     });
 });
 
-
-
-const primaryNav = document.querySelector(".primary-navigation");
+const primaryNav = document.querySelector(".primary-nav-list");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
 navToggle.addEventListener('click', (e) => {
@@ -69,5 +70,44 @@ navToggle.addEventListener('click', (e) => {
         primaryNav.setAttribute('data-visible', false);
         navToggle.setAttribute('aria-expanded', false);
     }
-
 });
+
+
+///-nav
+
+///+
+const btn = document.querySelector(".btn-theme");
+const colorThemes = document.querySelectorAll('[name="theme"]');
+
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+let theme = localStorage.getItem("theme");
+
+colorThemes.forEach((themeElt) => {
+    if (themeElt.id === theme) {
+        themeElt.checked = true;
+    }
+});
+
+if (theme == null) {
+    if (prefersDarkScheme) {
+        theme = "dark";
+    } else {
+        theme == "light";
+    }
+}
+
+document.documentElement.className = theme;
+
+colorThemes.forEach((themeElt) => {
+    themeElt.addEventListener('click', (e) => {
+
+        theme = themeElt.id;
+        localStorage.setItem("theme", theme);
+        document.documentElement.className = theme;
+
+    });
+});
+
+
+///-
