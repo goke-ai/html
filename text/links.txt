@@ -3,21 +3,33 @@ https://realtimecolors.com/?colors=000000-ffffff-8fb3ff-ebf1ff-d41d6d
 ///+
 https://utopia.fyi/
 
-    /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.414,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-    /* Step -2: 12.50px → 10.00px */
-    --fs-200: clamp(0.63rem, calc(0.84rem + -0.27vw), 0.78rem);
-    /* Step -1: 15.00px → 14.14px */
-    --fs-300: clamp(0.88rem, calc(0.96rem + -0.09vw), 0.94rem);
-    /* Step 0: 18.00px → 20.00px */
-    --fs-400: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-    /* Step 1: 21.60px → 28.28px */
-    --fs-500: clamp(1.35rem, calc(1.20rem + 0.73vw), 1.77rem);
-    /* Step 2: 25.92px → 39.99px */
-    --fs-600: clamp(1.62rem, calc(1.31rem + 1.53vw), 2.50rem);
-    /* Step 3: 31.10px → 56.54px */
-    --fs-700: clamp(1.94rem, calc(1.39rem + 2.77vw), 3.53rem);
-    /* Step 4: 37.32px → 79.95px */
-    --fs-800: clamp(2.33rem, calc(1.41rem + 4.63vw), 5.00rem);
-    /* Step 5: 44.79px → 113.05px */
-    --fs-900: clamp(2.80rem, calc(1.32rem + 7.42vw), 7.07rem);
-///-
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step -3: 10.42px → 10.24px */
+  --step--3: clamp(0.64rem, calc(0.66rem + -0.02vw), 0.65rem);
+
+  /* Step -2: 12.50px → 12.80px */
+  --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.80rem);
+
+  /* Step -1: 15.00px → 16.00px */
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1.00rem);
+
+  /* Step 0: 18.00px → 20.00px */
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+
+  /* Step 1: 21.60px → 25.00px */
+  --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+
+  /* Step 2: 25.92px → 31.25px */
+  --step-2: clamp(1.62rem, calc(1.50rem + 0.58vw), 1.95rem);
+
+  /* Step 3: 31.10px → 39.06px */
+  --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+
+  /* Step 4: 37.32px → 48.83px */
+  --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+
+  /* Step 5: 44.79px → 61.04px */
+  --step-5: clamp(2.80rem, calc(2.45rem + 1.77vw), 3.82rem);
+}///-
