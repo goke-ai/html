@@ -9,18 +9,17 @@
 </head>
 
 <body>
-
     <section class="primary-layout flex">
         <aside class="drawer">
             <div class="drawer-wrapper">
                 <div class="drawer-controller">
-                    <span class="icon" style="--_clr-icon: green">
+                    <span class="icon" style="--_clr-icon: var(--clr-accent)">
                         <= </span>
                 </div>
                 <div class="drawer-content">
                     <nav class="drawer-navigation">
                         <ul class="drawer-nav-list flex">
-                            <li><a href=""><span class="nav-item-wrapper"><span class="icon"
+                            <li><a href="#"><span class="nav-item-wrapper"><span class="icon"
                                             style="--_clr-icon: yellow">X</span><span class="nav-item-text">Drawer Link
                                             1</span></span></a></li>
                             <li class="dropdown"><a href=""><span class="nav-item-wrapper">
@@ -35,13 +34,13 @@
                                     <li><a href="#">Sub Drawer2 5</a></li>
                                 </ul>
                             </li>
-                            <li><a href=""><span class="nav-item-wrapper"><span class="icon"
+                            <li><a href="#"><span class="nav-item-wrapper"><span class="icon"
                                             style="--_clr-icon: yellow">X</span><span class="nav-item-text">Drawer Link
                                             3</span></span></a></li>
-                            <li><a href=""><span class="nav-item-wrapper"><span class="icon"
+                            <li><a href="#"><span class="nav-item-wrapper"><span class="icon"
                                             style="--_clr-icon: violet">X</span><span class="nav-item-text">Drawer Link
                                             4</span></span></a></li>
-                            <li><a href=""><span class="nav-item-wrapper"><span class="icon"
+                            <li><a href="#"><span class="nav-item-wrapper"><span class="icon"
                                             style="--_clr-icon: brown">X</span><span class="nav-item-text">Drawer Link
                                             5</span></span></a></li>
                         </ul>
@@ -63,7 +62,7 @@
                         <li><a href="contact.html">Contact</a></li>
                         <li class="dropdown"><a href="#">Account</a>
                             <ul class="dropdown-list">
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="#">Login</a></li>
                                 <li><a href="register.html">Register</a></li>
                                 <li><a href="#">Sub Menu3 3</a></li>
                             </ul>
@@ -89,17 +88,33 @@
                         fugit eligendi consectetur sit sapiente ab fuga facere numquam nemo enim mollitia vero! Neque
                         corporis quisquam ex.
                         Quis ex est officiis porro laboriosam voluptatem numquam incidunt cumque. Doloremque aliquid
-                        odio,
-                        at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
-                        illum
-                        praesentium eligendi?
-                        Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
-                        adipisci
-                        eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat numquam ut cum
-                        reiciendis architecto minus soluta.
-                        Unde possimus commodi impedit rem minus aut pariatur libero magni illum consequuntur id laborum
-                        aliquam, rerum accusantium fuga voluptate ipsa assumenda dolores ab maxime, et accusamus eius?
-                        Tempore, quod voluptatum!</p>
+                        odio. </p>
+
+                    <div class="card">
+                        <img src="images/background.jpg" alt="">
+                        <div class="card-body">
+                            at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
+                            illum praesentium eligendi?
+                        </div>
+                    </div>
+                    <div class="card-secondary">
+                        <img src="images/planets-collide-wide-wallpaper-22488.jpg" alt="">
+                        <div class="card-body">
+                            Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
+                            adipisci eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat
+                            numquam ut cum reiciendis architecto minus soluta.
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="card-body">
+                            Unde possimus commodi impedit rem minus aut pariatur libero magni illum consequuntur id
+                            laborum
+                            aliquam, rerum accusantium fuga voluptate ipsa assumenda dolores ab maxime, et accusamus
+                            eius?
+                            Tempore, quod voluptatum!
+                        </div>
+                    </div>
 
                     <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est nesciunt, cum fugit veniam
@@ -167,7 +182,14 @@
                 </div>
             </main>
 
-            <footer>footer</footer>
+            <footer>
+                <div class="footer-wrapper">
+                    <h2>footer</h2>
+                    <span class="icon">fb</span>
+                    <span class="icon">X</span>
+                    <span class="icon">t</span>
+                </div>
+            </footer>
 
         </section>
     </section>
@@ -263,11 +285,12 @@
                 </div>
             </div>
             <div class="sidebar-controller">
-                <div class="icon" style="--_clr-icon: blueviolet">O</div>
+                <div class="icon" style="--_clr-icon: var(--clr-text)">O</div>
             </div>
         </div>
     </aside>
 
+    <script src="../base.js"></script>
     <script src="script.js"></script>
 
 </body>
