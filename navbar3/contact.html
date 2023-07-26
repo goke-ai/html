@@ -59,8 +59,8 @@
                     <label class="navbar-controller-label" for="navbar-controller"><span class="icon">X</span></label>
 
                     <ul class="primary-nav-list flex">
-                        <li><a class="active" href="#">Home</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="#">Contact</a></li>
                         <li class="dropdown"><a href="#">Account</a>
                             <ul class="dropdown-list">
                                 <li><a href="login.html">Login</a></li>
@@ -80,90 +80,68 @@
             </header>
             <main>
                 <div class="wrapper flow">
-                    <h1>Home</h1>
-                    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est nesciunt, cum fugit veniam
-                        animi in
-                        modi perspiciatis? Aliquid officia eaque aliquam eveniet eum illum in nihil similique amet at.
-                        Et blanditiis eveniet neque quos quis odio ipsam suscipit, autem illo necessitatibus laudantium,
-                        fugit eligendi consectetur sit sapiente ab fuga facere numquam nemo enim mollitia vero! Neque
-                        corporis quisquam ex.
-                        Quis ex est officiis porro laboriosam voluptatem numquam incidunt cumque. Doloremque aliquid
-                        odio,
-                        at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
-                        illum
-                        praesentium eligendi?
-                        Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
-                        adipisci
-                        eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat numquam ut cum
-                        reiciendis architecto minus soluta.
-                        Unde possimus commodi impedit rem minus aut pariatur libero magni illum consequuntur id laborum
-                        aliquam, rerum accusantium fuga voluptate ipsa assumenda dolores ab maxime, et accusamus eius?
-                        Tempore, quod voluptatum!</p>
+                    <h1>Contact</h1>
+                    <div class="form-area">
+                        <form action="/submit_form" method="POST">
+                            <div class="form-row">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
 
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est nesciunt, cum fugit veniam
-                        animi in
-                        modi perspiciatis? Aliquid officia eaque aliquam eveniet eum illum in nihil similique amet at.
-                        Et blanditiis eveniet neque quos quis odio ipsam suscipit, autem illo necessitatibus laudantium,
-                        fugit eligendi consectetur sit sapiente ab fuga facere numquam nemo enim mollitia vero! Neque
-                        corporis quisquam ex.
-                        Quis ex est officiis porro laboriosam voluptatem numquam incidunt cumque. Doloremque aliquid
-                        odio,
-                        at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
-                        illum
-                        praesentium eligendi?
-                        Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
-                        adipisci
-                        eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat numquam ut cum
-                        reiciendis architecto minus soluta.
-                        Unde possimus commodi impedit rem minus aut pariatur libero magni illum consequuntur id laborum
-                        aliquam, rerum accusantium fuga voluptate ipsa assumenda dolores ab maxime, et accusamus eius?
-                        Tempore, quod voluptatum!</p>
+                            <div class="form-row">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
 
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, nulla.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est nesciunt, cum fugit veniam
-                        animi in
-                        modi perspiciatis? Aliquid officia eaque aliquam eveniet eum illum in nihil similique amet at.
-                        Et blanditiis eveniet neque quos quis odio ipsam suscipit, autem illo necessitatibus laudantium,
-                        fugit eligendi consectetur sit sapiente ab fuga facere numquam nemo enim mollitia vero! Neque
-                        corporis quisquam ex.
-                        Quis ex est officiis porro laboriosam voluptatem numquam incidunt cumque. Doloremque aliquid
-                        odio,
-                        at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
-                        illum
-                        praesentium eligendi?
-                        Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
-                        adipisci
-                        eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat numquam ut cum
-                        reiciendis architecto minus soluta.
-                        Unde possimus commodi impedit rem minus aut pariatur libero magni illum consequuntur id laborum
-                        aliquam, rerum accusantium fuga voluptate ipsa assumenda dolores ab maxime, et accusamus eius?
-                        Tempore, quod voluptatum!</p>
+                            <div class="form-row">
+                                <label>Gender</label>
+                                <div class="form-row-col-2">
+                                    <input type="radio" id="male" name="gender" value="male" required>
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="female" name="gender" value="female" required>
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
 
-                    <h1>Lorem ipsum dolor sit.</h1>
-                    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
-                    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa dolores commodi corporis
-                        incidunt veritatis suscipit.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est nesciunt, cum fugit veniam
-                        animi in
-                        modi perspiciatis? Aliquid officia eaque aliquam eveniet eum illum in nihil similique amet at.
-                        Et blanditiis eveniet neque quos quis odio ipsam suscipit, autem illo necessitatibus laudantium,
-                        fugit eligendi consectetur sit sapiente ab fuga facere numquam nemo enim mollitia vero! Neque
-                        corporis quisquam ex.
-                        Quis ex est officiis porro laboriosam voluptatem numquam incidunt cumque. Doloremque aliquid
-                        odio,
-                        at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
-                        illum
-                        praesentium eligendi?
-                        Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
-                        adipisci
-                        eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat numquam ut cum
-                        reiciendis architecto minus soluta.
-                        Unde possimus commodi impedit rem minus aut pariatur libero magni illum consequuntur id laborum
-                        aliquam, rerum accusantium fuga voluptate ipsa assumenda dolores ab maxime, et accusamus eius?
-                        Tempore, quod voluptatum!</p>
+                            <div class="form-row">
+                                <label>Interests</label>
+                                <div class="form-row-col-2">
+                                    <input type="checkbox" id="reading" name="interests" value="reading">
+                                    <label for="reading">Reading</label>
+                                    <input type="checkbox" id="gaming" name="interests" value="gaming">
+                                    <label for="gaming">Gaming</label>
+                                    <input type="checkbox" id="cooking" name="interests" value="cooking">
+                                    <label for="cooking">Cooking</label>
+                                </div>
+                            </div>
 
+                            <div class="form-row">
+                                <label for="comments">Comments of governors</label>
+                                <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="country">Country</label>
+                                <select id="country" name="country">
+                                    <option value="usa">USA</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="uk">UK</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="australia">Australia</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div></div>
+                                <div>
+                                    <button class="primary" type="submit">Submit</button>
+                                    <button type="reset">Reset</button>
+                                    <button class="secondary" type="button">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </main>
 
@@ -176,8 +154,8 @@
         <div class="sidebar-wrapper collapse">
             <div class="sidebar-content">
                 <h1>sidebar</h1>
-                <div class="form-area break-label">
-                    <form action="/submit_form" method="POST">
+                <div class="form-area">
+                    <form class="break-label" action="/submit_form" method="POST">
                         <div class="form-row">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -258,8 +236,6 @@
                         </div>
 
                     </form>
-
-
                 </div>
             </div>
             <div class="sidebar-controller">
