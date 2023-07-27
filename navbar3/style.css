@@ -144,7 +144,7 @@ footer {
     position: relative;
 }
 
-.dropdown a{
+.dropdown a {
     /* pointer-events: none; */
     /* cursor: default; */
     /* text-decoration: none; */
@@ -320,6 +320,7 @@ input[type='radio']:checked {
     --hsl-text: 0, 0%, 10%;
     --hsl-background: 0, 0%, 90%;
 
+    --clr-primary-50: hsl(0, 0%, 95%);
     --clr-primary-100: hsl(0, 0%, 90%);
     --clr-primary-200: hsl(0, 0%, 70%);
     --clr-primary-300: hsl(0, 0%, 25%);
@@ -332,6 +333,7 @@ input[type='radio']:checked {
     --hsl-text: 0, 0%, 90%;
     --hsl-background: 0, 0%, 10%;
 
+    --clr-primary-50: hsl(0, 0%, 5%);
     --clr-primary-100: hsl(0, 0%, 10%);
     --clr-primary-200: hsl(0, 0%, 25%);
     --clr-primary-300: hsl(0, 0%, 70%);
@@ -343,6 +345,7 @@ input[type='radio']:checked {
     --hsl-text: 310, 50%, 15%;
     --hsl-background: 310, 50%, 90%;
 
+    --clr-primary-50: hsl(310, 50%, 95%);
     --clr-primary-100: hsl(310, 50%, 90%);
     --clr-primary-200: hsl(310, 50%, 80%);
     --clr-primary-300: hsl(310, 50%, 25%);
@@ -354,6 +357,7 @@ input[type='radio']:checked {
     --hsl-text: 220, 50%, 10%;
     --hsl-background: 220, 50%, 90%;
 
+    --clr-primary-50: hsl(220, 50%, 95%);
     --clr-primary-100: hsl(220, 50%, 90%);
     --clr-primary-200: hsl(220, 50%, 80%);
     --clr-primary-300: hsl(220, 50%, 25%);
@@ -365,6 +369,7 @@ input[type='radio']:checked {
     --hsl-text: 140, 50%, 10%;
     --hsl-background: 140, 50%, 90%;
 
+    --clr-primary-50: hsl(140, 50%, 95%);
     --clr-primary-100: hsl(140, 50%, 90%);
     --clr-primary-200: hsl(140, 50%, 80%);
     --clr-primary-300: hsl(140, 50%, 25%);
