@@ -13,8 +13,8 @@
         <aside class="drawer">
             <div class="drawer-wrapper">
                 <div class="drawer-controller">
-                    <span class="icon" style="--_clr-icon: var(--clr-accent)">
-                        &lAarr; </span>
+                    <div class="btn icon" style="--_clr-icon: var(--clr-accent)">
+                    </div>
                 </div>
                 <div class="drawer-content">
                     <nav class="drawer-navigation">
@@ -22,7 +22,8 @@
                             <li><a href="#"><span class="nav-item-wrapper"><span class="icon"
                                             style="--_clr-icon: yellow">X</span><span class="nav-item-text">Drawer Link
                                             1</span></span></a></li>
-                            <li class="dropdown"><a href=""><span class="nav-item-wrapper">
+                            <li class="dropdown">
+                                <a href="#" title="Components"><span class="nav-item-wrapper">
                                         <span class="icon" style="--_clr-icon: lime">X</span><span
                                             class="nav-item-text">Components</span></span>
                                 </a>
@@ -47,8 +48,14 @@
                     </nav>
                 </div>
 
+                <div class="drawer-controller">
+                    <div class="btn icon" style="--_clr-icon: var(--clr-accent)">
+                    </div>
+                </div>
+
             </div>
         </aside>
+
         <section class="page">
             <header>
                 <nav class="primary-navigation flex">
@@ -58,7 +65,7 @@
                     <label class="navbar-controller-label" for="navbar-controller"><span class="icon">X</span></label>
 
                     <ul class="primary-nav-list flex">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home <span>🏡</span></a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li class="dropdown"><a href="#">Account</a>
                             <ul class="dropdown-list">
@@ -82,30 +89,52 @@
                 <div class="wrapper flow">
                     <h1>Components</h1>
                     <div class="card-secondary">
+                        <div class="card-header">
+                            Pagination
+                        </div>
                         <div class="card-body">
-                            <div>Pagination:
+                            <div>
+                                Pagination:
                                 <div class="pagination">
                                     <ul>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">&laquo;</a></li>
-                                        <li><a href="#">&langle;</a></li>
+                                        <li class="mobile"><a href="#">1</a></li>
+                                        <li class="mobile"><a href="#">&Lang; </a></li>
+                                        <li class="mobile"><a href="#">&langle;</a></li>
                                         <li><a href="#">6</a></li>
                                         <li><a href="#">7</a></li>
-                                        <li><a class="active" href="#">8</a></li>
+                                        <li class="mobile"><a class="active" href="#">8</a></li>
                                         <li><a href="#">9</a></li>
                                         <li><a href="#">10</a></li>
-                                        <li><a href="#">&rangle;</a></li>
-                                        <li><a href="#">&raquo;</a></li>
-                                        <li><a href="#">100</a></li>
+                                        <li class="mobile"><a href="#">&rangle; </a></li>
+                                        <li class="mobile"><a href="#">&Rang;</a></li>
+                                        <li class="mobile"><a href="#">100</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pagination">
+                                    <ul>
+                                        <li class="mobile"><a href="#">1</a></li>
+                                        <li class="mobile"><a href="#">&Lang; </a></li>
+                                        <li class="mobile"><a href="#">&langle;</a></li>
+                                        <li><a class="active" style="--radius: 1vh" href="#">6</a></li>
+                                        <li><a href="#">7</a></li>
+                                        <li class="mobile"><a class="active" style="--radius: 50vh" href="#">8</a></li>
+                                        <li><a href="#">9</a></li>
+                                        <li><a class="active" style="--radius: 0.5rem" href="#">10</a></li>
+                                        <li class="mobile"><a href="#">&rangle; </a></li>
+                                        <li class="mobile"><a href="#">&Rang;</a></li>
+                                        <li class="mobile"><a href="#">100</a></li>
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                        <div class="card-footer">
+                            foot
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="card-body">
-                            <table>
+                            <table class="mobile-col-2 mobile-col-5 mobile-col-6">
                                 <tr>
                                     <th>Header 1</th>
                                     <th>Header 2</th>
@@ -114,37 +143,47 @@
                                     <th>Header 5</th>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
@@ -154,7 +193,7 @@
 
                     <div class="card-secondary">
                         <div class="card-body">
-                            <table>
+                            <table class="mobile-col-1-3">
                                 <tr>
                                     <th>Header 1</th>
                                     <th>Header 2</th>
@@ -163,37 +202,47 @@
                                     <th>Header 5</th>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
                                 <tr>
-                                    <td>Cell 1</td>
-                                    <td>Cell 2</td>
-                                    <td>Cell 3</td>
+                                    <td>The husband is from etiosa local govet</td>
+                                    <td>Wife is sandy</td>
+                                    <td>Cell Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, iure
+                                        nostrum expedita id soluta, est eaque rem et, molestiae quas nesciunt aperiam
+                                        debitis eius earum ea ipsam laboriosam modi animi.</td>
                                     <td>Cell 4</td>
                                     <td>Cell 5</td>
                                 </tr>
@@ -231,6 +280,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card-secondary  card-body">
                         <form action="/submit_form" method="POST">
                             <div class="form-row">
@@ -246,22 +296,31 @@
                             <div class="form-row">
                                 <label>Gender</label>
                                 <div class="form-row-col-2">
-                                    <input type="radio" id="male" name="gender" value="male" required>
-                                    <label for="male">Male</label>
-                                    <input type="radio" id="female" name="gender" value="female" required>
-                                    <label for="female">Female</label>
+                                    <div>
+                                        <input type="radio" id="male" name="gender" value="male" required>
+                                        <label for="male">Male</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="female" name="gender" value="female" required>
+                                        <label for="female">Female</label>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <label>Interests</label>
                                 <div class="form-row-col-2">
-                                    <input type="checkbox" id="reading" name="interests" value="reading">
-                                    <label for="reading">Reading</label>
-                                    <input type="checkbox" id="gaming" name="interests" value="gaming">
-                                    <label for="gaming">Gaming</label>
-                                    <input type="checkbox" id="cooking" name="interests" value="cooking">
-                                    <label for="cooking">Cooking</label>
+                                    <div>
+                                        <input type="checkbox" id="reading" name="interests" value="reading">
+                                        <label for="reading">Reading</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="gaming" name="interests" value="gaming">
+                                        <label for="gaming">Gaming</label>
+                                    </div>
+                                    <div> <input type="checkbox" id="cooking" name="interests" value="cooking">
+                                        <label for="cooking">Cooking</label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -298,10 +357,9 @@
 
             <footer>
                 <div class="footer-wrapper">
-                    <h2>footer</h2>
-                    <span class="icon">fb</span>
-                    <span class="icon">X</span>
-                    <span class="icon">t</span>
+                    <span class="icon"><span>&#9818</span></span>
+                    <span class="icon"><span>&#9812</span></span>
+                    <span class="icon"><span>&#9962</span></span>
                 </div>
             </footer>
 
@@ -327,22 +385,31 @@
                         <div class="form-row">
                             <label>Gender</label>
                             <div class="form-row-col-2">
-                                <input type="radio" id="male" name="gender" value="male" required>
-                                <label for="male">Male</label>
-                                <input type="radio" id="female" name="gender" value="female" required>
-                                <label for="female">Female</label>
+                                <div>
+                                    <input type="radio" id="male" name="gender" value="male" required>
+                                    <label for="male">Male</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="female" name="gender" value="female" required>
+                                    <label for="female">Female</label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <label>Interests</label>
                             <div class="form-row-col-2">
-                                <input type="checkbox" id="reading" name="interests" value="reading">
-                                <label for="reading">Reading</label>
-                                <input type="checkbox" id="gaming" name="interests" value="gaming">
-                                <label for="gaming">Gaming</label>
-                                <input type="checkbox" id="cooking" name="interests" value="cooking">
-                                <label for="cooking">Cooking</label>
+                                <div>
+                                    <input type="checkbox" id="reading" name="interests" value="reading">
+                                    <label for="reading">Reading</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="gaming" name="interests" value="gaming">
+                                    <label for="gaming">Gaming</label>
+                                </div>
+                                <div> <input type="checkbox" id="cooking" name="interests" value="cooking">
+                                    <label for="cooking">Cooking</label>
+                                </div>
                             </div>
                         </div>
 
@@ -399,7 +466,8 @@
                 </div>
             </div>
             <div class="sidebar-controller">
-                <div class="icon" style="--_clr-icon: var(--clr-text)">O</div>
+                <div class="btn icon" style="--_clr-icon: var(--clr-accent)">
+                </div>
             </div>
         </div>
     </aside>

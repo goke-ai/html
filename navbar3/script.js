@@ -1,10 +1,16 @@
 // 
+
+color_theme();
+
+// 
 function drawerSys(selector, parent) {
-    const ctrl = document.querySelector(selector);
-    ctrl.addEventListener('click', (event) => {
-        // add active to the ancestor anchor
-        const ancestor = findAncestor(event.target, parent);
-        ancestor.classList.toggle('collapse');
+    const ctrls = document.querySelectorAll(selector);
+    ctrls.forEach((ctrl) => {
+        ctrl.addEventListener('click', (event) => {
+            // add active to the ancestor anchor
+            const ancestor = findAncestor(event.target, parent);
+            ancestor.classList.toggle('collapse');
+        })
     });
 }
 

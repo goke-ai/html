@@ -11,6 +11,44 @@ function findAncestor(element, selector) {
     }
 }
 
+function color_theme() {
+    ///+
+    const colorThemes = document.querySelectorAll('[name="theme"]');
+
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    let theme = localStorage.getItem("theme");
+
+    colorThemes.forEach((themeElt) => {
+        if (themeElt.id === theme) {
+            themeElt.checked = true;
+        }
+    });
+
+    if (theme == null) {
+        if (prefersDarkScheme) {
+            theme = "dark";
+        } else {
+            theme == "light";
+        }
+    }
+
+    document.documentElement.className = theme;
+
+    colorThemes.forEach((themeElt) => {
+        themeElt.addEventListener('click', (e) => {
+
+            theme = themeElt.id;
+            localStorage.setItem("theme", theme);
+            document.documentElement.className = theme;
+
+        });
+    });
+
+
+    ///-
+}
+
 function navSystem(selector) {
     // Get all the anchor elements inside the navigation menu
     const navLinks = document.querySelectorAll(selector);
