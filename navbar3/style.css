@@ -119,9 +119,11 @@ footer {
 }
 
 .navbar-controller,
+.navbar-controller-checkbox,
 .navbar-controller-label {
     display: none;
 }
+
 
 .primary-navigation {
     /* padding: .25rem; */
@@ -259,6 +261,16 @@ li.dropdown:hover .dropdown-list {
 
         padding: var(--size-600);
     }
+
+    .navbar-controller .icon:before {
+        content: '\2630';
+        /* font-size: var(--fs-600); */
+    }
+
+    input[type=checkbox]:checked~.navbar-controller .icon:before {
+        content: '\00D7';
+    }
+
 
     li.dropdown:hover .dropdown-list {
         /* position: relative; */

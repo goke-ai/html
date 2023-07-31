@@ -386,7 +386,7 @@ table th {
     .flex-group {
         flex-wrap: wrap;
     }
-    
+
 }
 
 .flow>*+* {
@@ -418,6 +418,11 @@ table th {
     font-weight: bolder;
 
     /* border-radius: 1vh 0 0 1vh; */
+}
+
+.icon:before,
+.icon:after {
+    font-size: var(--fs-700);
 }
 
 .icon>* {
