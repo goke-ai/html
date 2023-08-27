@@ -1,5 +1,41 @@
 https://realtimecolors.com/?colors=000000-ffffff-8fb3ff-ebf1ff-d41d6d
 
+
+--text: hsl(221, 44%, 7%);
+--background: hsl(224, 44%, 95%);
+--primary: hsl(221, 100%, 78%);
+--secondary: hsl(221, 43%, 80%);
+--accent: hsl(221, 43%, 40%);
+
+------------------------------------
+
+--text: hsl(224, 44%, 95%);
+--background: hsl(221, 44%, 7%);
+--primary: hsl(221, 100%, 78%);
+--secondary: hsl(220, 60%, 1%);
+--accent: hsl(222, 42%, 70%);
+
+----------------------------------
+
+--text: hsl(0, 0%, 0%);
+--background: hsl(0, 0%, 100%);
+--primary: hsl(221, 100%, 78%);
+--secondary: hsl(222, 100%, 96%);
+--accent: hsl(334, 76%, 47%);
+
+------------------
+
+--text: hsl(0, 0%, 100%);
+--background: hsl(0, 0%, 4%);
+--primary: hsl(221, 100%, 78%);
+--secondary: hsl(180, 5%, 12%);
+--accent: hsl(272, 6%, 52%);
+
+---------------------------
+
+
+
+
 ///+
 https://utopia.fyi/
 

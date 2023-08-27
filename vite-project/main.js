@@ -12,6 +12,8 @@ import _Drawer from './views/_Drawer'
 import _Sidebar from './views/_Sidebar'
 import _Navbar from './views/_Navbar'
 import _Footer from './views/_Footer'
+import Login from './views/Login'
+import Page404 from './views/Page404'
 
 document.querySelector('#app').innerHTML = `
 <div>
@@ -31,8 +33,6 @@ document.querySelector('#app').innerHTML = `
 `
 
 // setupCounter(document.querySelector('#counter'))
-
-
 
 // partial views
 const partialViews = async () => {
@@ -79,10 +79,11 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
+        { path: "/404", view: Page404 },
         { path: "/", view: Dashboard },
         { path: "/contact", view: Contact },
         { path: "/posts/:id", view: PostDetail },
-        { path: "/login", view: () => console.log("Viewing Login") },
+        { path: "/login", view: Login },
         { path: "/components", view: Components },
 
     ];
@@ -109,6 +110,16 @@ const router = async () => {
 
     document.querySelector('main').innerHTML = await view.getHtml();
 
+    // console.log(location.pathname);
+    // // const selector = data-link href="/register
+    // const selector = `a[href="${location.pathname}"]`
+    // console.log(selector);
+    // const element = document.querySelector(selector);
+    // console.log(element);
+    // // element.click();
+    // const activeElt = document.querySelector('a.active');
+    // console.log(activeElt);
+
 }
 
 window.addEventListener('popstate', router);
@@ -126,4 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
     partialViews();
     // 
     router();
+
+
 });
