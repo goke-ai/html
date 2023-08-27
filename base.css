@@ -213,8 +213,8 @@ select {
 }
 
 button {
-  --_clr-bg: var(--clr-text);
-  --_clr-fg: var(--clr-body-bg);
+  --_clr-bg: var(--clr-accent);
+  --_clr-fg: var(--clr-card-bg);
 
   background: var(--_clr-bg);
   color: var(--_clr-fg);
@@ -223,21 +223,21 @@ button {
 }
 
 button:hover {
-  --_clr-bg: var(--clr-body-bg);
-  --_clr-fg: var(--clr-text);
+  --_clr-bg: var(--clr-card-bg);
+  --_clr-fg: var(--clr-accent);
 
   /* background: var(--clr-body-bg);
     color: var(--clr-text); */
 }
 
 button.primary {
-  --_clr-bg: var(--clr-primary);
-  --_clr-fg: var(--clr-text);
+  --_clr-bg: var(--clr-text);
+  --_clr-fg: var(--clr-body-bg);
 }
 
 button:hover.primary {
-  --_clr-bg: var(--clr-accent);
-  --_clr-fg: var(--clr-primary);
+  --_clr-bg: var(--clr-body-bg);
+  --_clr-fg: var(--clr-text);
 }
 
 button.secondary {
@@ -284,8 +284,8 @@ nav li {
 }
 
 nav a.active {
-  background-color: var(--clr-primary);
-  /* color: var(--clr-accent); */
+  background-color: var(--clr-accent);
+  color: var(--clr-body-bg);
   pointer-events: none;
   cursor: default;
 }
