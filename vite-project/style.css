@@ -116,7 +116,7 @@ footer {
   align-items: center;
   gap: var(--size-700);
 
-  background: hsla(var(--hsl-text), 0.9);
+  background: hsla(var(--hsl-text), 0.1);
   background-image: linear-gradient(180deg,
       var(--clr-card-bg) 0%,
       var(--clr-primary) 90%);
