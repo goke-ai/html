@@ -331,16 +331,16 @@ table th {
   table.mobile-col-1-8 tr> :nth-child(n+9),
   table.mobile-col-1-9 tr> :nth-child(n+10),
   /* table.mobile-col-1 tr> :nth-child(1), */
-  table.mobile-col-1 tr> :nth-child(1),
-  table.mobile-col-2 tr> :nth-child(2),
-  table.mobile-col-3 tr> :nth-child(3),
-  table.mobile-col-4 tr> :nth-child(4),
-  table.mobile-col-5 tr> :nth-child(5),
-  table.mobile-col-6 tr> :nth-child(6),
-  table.mobile-col-7 tr> :nth-child(7),
-  table.mobile-col-8 tr> :nth-child(8),
-  table.mobile-col-9 tr> :nth-child(9),
-  table.mobile-col-10 tr> :nth-child(10) {
+  table.mobile-remove-col-1 tr> :nth-child(1),
+  table.mobile-remove-col-2 tr> :nth-child(2),
+  table.mobile-remove-col-3 tr> :nth-child(3),
+  table.mobile-remove-col-4 tr> :nth-child(4),
+  table.mobile-remove-col-5 tr> :nth-child(5),
+  table.mobile-remove-col-6 tr> :nth-child(6),
+  table.mobile-remove-col-7 tr> :nth-child(7),
+  table.mobile-remove-col-8 tr> :nth-child(8),
+  table.mobile-remove-col-9 tr> :nth-child(9),
+  table.mobile-remove-col-10 tr> :nth-child(10) {
     display: none;
   }
 }
@@ -412,8 +412,8 @@ button:has(.icon:only-child) {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: var(--icon-sz, 1em);
-  min-height: var(--icon-sz, 1em);
+  width: var(--icon-sz, 1em);
+  height: var(--icon-sz, 1em);
   aspect-ratio: 1;
   /* padding: calc(var(--size-300) * 2); */
   border: 1px solid var(--_clr-icon-border);

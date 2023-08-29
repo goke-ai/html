@@ -33,7 +33,7 @@ footer {
 }
 
 @media (max-width: 35em) {
-  .drawer{
+  .drawer {
     display: none;
   }
 }
@@ -121,7 +121,9 @@ footer {
   background-image: linear-gradient(180deg,
       var(--clr-card-bg) 0%,
       var(--clr-primary) 90%);
-}@import url(../base.css);
+}
+
+@import url(../base.css);
 
 body {
   font-size: 13px;
@@ -154,7 +156,7 @@ footer {
 }
 
 @media (max-width: 35em) {
-  .drawer{
+  .drawer {
     display: none;
   }
 }
@@ -422,7 +424,7 @@ li.dropdown:hover .dropdown-list {
 @media (max-width: 35em) {
   .sidebar-wrapper {
     --_sb-width: 260px;
-  }  
+  }
 }
 
 .sidebar-wrapper.collapse {
@@ -491,229 +493,38 @@ input[type="radio"]:checked {
   --radio-color: black;
 }
 
-.neutral,
-:root:has(#neutral:checked) {
-  --hsl-text: 0, 0%, 10%;
-  --hsl-background: 0, 0%, 90%;
-
-  --clr-primary-50: hsl(0, 0%, 95%);
-  --clr-primary-100: hsl(0, 0%, 90%);
-  --clr-primary-200: hsl(0, 0%, 70%);
-  --clr-primary-300: hsl(0, 0%, 25%);
-  --clr-primary-400: hsl(0, 0%, 10%);
-
-  --text: hsl(0, 0%, 7%);
-  --body-text: hsl(0, 0%, 10%);
-  --background: hsl(0, 0%, 95%);
-  --card-background: hsl(0, 0%, 85%);
-  --primary: hsl(0, 0%, 78%);
-  --secondary: hsl(0, 0%, 80%);
-  --accent: hsl(0, 0%, 40%);
-
-  --hsl-text: 0, 0%, 7%;
-  --hsl-background: 0, 0%, 95%;
-
-  --clr-text: var(--text);
-  --clr-card-bg: var(--card-background);
-  --clr-body: var(--body-text);
-  --clr-body-bg: var(--background);
-  --clr-primary: var(--primary);
-  --clr-secondary: var(--secondary);
-
-  --clr-accent: var(--accent);
-
-}
-
-.neutral .dark,
-:root:has(#neutral:checked):has(#dark:checked) {
-  --hsl-text: 0, 0%, 90%;
-  --hsl-background: 0, 0%, 10%;
-
-  --clr-primary-50: hsl(0, 0%, 5%);
-  --clr-primary-100: hsl(0, 0%, 10%);
-  --clr-primary-200: hsl(0, 0%, 25%);
-  --clr-primary-300: hsl(0, 0%, 70%);
-  --clr-primary-400: hsl(0, 0%, 90%);
-
-  --text: hsl(0, 0%, 95%);
-  --body-text: hsl(0, 0%, 85%);
-  --background: hsl(0, 0%, 7%);
-  --card-background: hsl(0, 0%, 17%);
-  --primary: hsl(0, 0%, 78%);
-  --secondary: hsl(0, 0%, 1%);
-  --accent: hsl(0, 0%, 70%);
-
-  --hsl-text: 0, 0%, 95%;
-  --hsl-background: 0, 0%, 7%;
-
-}
-
-.pink,
-:root:has(#pink:checked) {
-  --hsl-text: 310, 50%, 15%;
-  --hsl-background: 310, 50%, 90%;
-
-  --clr-primary-50: hsl(310, 50%, 95%);
-  --clr-primary-100: hsl(310, 50%, 90%);
-  --clr-primary-200: hsl(310, 50%, 80%);
-  --clr-primary-300: hsl(310, 50%, 25%);
-  --clr-primary-400: hsl(310, 50%, 15%);
-
-  --text: hsl(310, 44%, 7%);
-  --body-text: hsl(310, 44%, 10%);
-  --background: hsl(310, 44%, 95%);
-  --card-background: hsl(310, 44%, 85%);
-  --primary: hsl(310, 100%, 78%);
-  --secondary: hsl(310, 43%, 80%);
-  --accent: hsl(310, 43%, 40%);
-
-  --hsl-text: 310, 44%, 7%;
-  --hsl-background: 310, 44%, 95%;
-
-  --clr-text: var(--text);
-  --clr-card-bg: var(--card-background);
-  --clr-body: var(--body-text);
-  --clr-body-bg: var(--background);
-  --clr-primary: var(--primary);
-  --clr-secondary: var(--secondary);
-
-  --clr-accent: var(--accent);
-
-}
-
-.pink .dark,
-:root:has(#pink:checked):has(#dark:checked) {
-  --text: hsl(310, 44%, 95%);
-  --body-text: hsl(310, 44%, 85%);
-  --background: hsl(310, 44%, 7%);
-  --card-background: hsl(310, 44%, 17%);
-  --primary: hsl(310, 100%, 78%);
-  --secondary: hsl(310, 60%, 1%);
-  --accent: hsl(310, 42%, 70%);
-
-  --hsl-text: 310, 44%, 95%;
-  --hsl-background: 310, 44%, 7%;
-}
-
-.blue,
-:root:has(#blue:checked) {
-  --hsl-text: 220, 50%, 10%;
-  --hsl-background: 220, 50%, 90%;
-
-  --clr-primary-50: hsl(220, 50%, 95%);
-  --clr-primary-100: hsl(220, 50%, 90%);
-  --clr-primary-200: hsl(220, 100%, 80%);
-  --clr-primary-300: hsl(220, 50%, 25%);
-  --clr-primary-400: hsl(220, 50%, 15%);
-
-  --text: hsl(221, 44%, 7%);
-  --body-text: hsl(221, 44%, 10%);
-  --background: hsl(221, 44%, 95%);
-  --card-background: hsl(221, 44%, 85%);
-  --primary: hsl(221, 100%, 78%);
-  --secondary: hsl(221, 43%, 80%);
-  --accent: hsl(221, 43%, 40%);
-
-  --hsl-text: 221, 44%, 7%;
-  --hsl-background: 224, 44%, 95%;
-
-  --clr-text: var(--text);
-  --clr-card-bg: var(--card-background);
-  --clr-body: var(--body-text);
-  --clr-body-bg: var(--background);
-  --clr-primary: var(--primary);
-  --clr-secondary: var(--secondary);
-
-  --clr-accent: var(--accent);
-}
-
-.blue .dark,
-:root:has(#blue:checked):has(#dark:checked) {
-  --text: hsl(224, 44%, 95%);
-  --body-text: hsl(224, 44%, 85%);
-  --background: hsl(221, 44%, 7%);
-  --card-background: hsl(221, 44%, 17%);
-  --primary: hsl(221, 100%, 78%);
-  --secondary: hsl(220, 60%, 1%);
-  --accent: hsl(222, 42%, 70%);
-
-  --hsl-text: 224, 44%, 95%;
-  --hsl-background: 221, 44%, 7%;
-}
-
-.green,
-:root:has(#green:checked) {
-  --hsl-text: 140, 50%, 10%;
-  --hsl-background: 140, 50%, 90%;
-
-  --clr-primary-50: hsl(140, 50%, 95%);
-  --clr-primary-100: hsl(140, 50%, 90%);
-  --clr-primary-200: hsl(140, 50%, 80%);
-  --clr-primary-300: hsl(140, 50%, 25%);
-  --clr-primary-400: hsl(140, 50%, 15%);
-
-
-  --text: hsl(140, 44%, 7%);
-  --body-text: hsl(140, 44%, 10%);
-  --background: hsl(140, 44%, 95%);
-  --card-background: hsl(140, 44%, 85%);
-  --primary: hsl(140, 100%, 78%);
-  --secondary: hsl(140, 43%, 80%);
-  --accent: hsl(140, 43%, 40%);
-
-  --hsl-text: 140, 44%, 7%;
-  --hsl-background: 140, 44%, 95%;
-
-  --clr-text: var(--text);
-  --clr-card-bg: var(--card-background);
-  --clr-body: var(--body-text);
-  --clr-body-bg: var(--background);
-  --clr-primary: var(--primary);
-  --clr-secondary: var(--secondary);
-
-  --clr-accent: var(--accent);
-}
-
-.green .dark,
-:root:has(#green:checked):has(#dark:checked) {
-  --text: hsl(140, 44%, 95%);
-  --body-text: hsl(140, 44%, 85%);
-  --background: hsl(140, 44%, 7%);
-  --card-background: hsl(140, 44%, 17%);
-  --primary: hsl(140, 100%, 78%);
-  --secondary: hsl(140, 60%, 1%);
-  --accent: hsl(140, 42%, 70%);
-
-  --hsl-text: 140, 44%, 95%;
-  --hsl-background: 140, 44%, 7%;
-}
-
 .footer-wrapper {
   background-color: var(--clr-card-bg);
   color: var(--clr-text);
   padding: var(--size-300);
 
   --icon-sz: 4em;
-  --_clr-icon-border: var(
-  --clr-accent);
+  --_clr-icon-border: var(--clr-accent);
   --icon-fs: 4em;
 }
 
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 1001; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 1001;
+  /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+  /* Add a pointer on hover */
 }
 
-.overlay > div,
+.overlay>div,
 .overlay-content {
   position: absolute;
   top: 50%;
@@ -735,9 +546,10 @@ input[type="radio"]:checked {
 }
 
 @media (max-width: 426px) {
-  .overlay > div,
+
+  .overlay>div,
   .overlay-content {
-    width: 90%;
+    width: 70%;
     height: 90%;
   }
 }
@@ -923,7 +735,7 @@ li.dropdown:hover .dropdown-list {
 @media (max-width: 35em) {
   .sidebar-wrapper {
     --_sb-width: 260px;
-  }  
+  }
 }
 
 .sidebar-wrapper.collapse {

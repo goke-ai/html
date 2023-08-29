@@ -54,7 +54,7 @@ export default class extends AbstractView {
         this.item = p;
         // callback();
 
-        document.getElementById('btnSave').textContent = "Delete";
+        document.getElementById('btnSave').textContent = "Confirm Delete";
         document.querySelector('.overlay').style.display = "block";
 
       });
@@ -96,9 +96,8 @@ export default class extends AbstractView {
             <div class="card-body">
               <div>
                 <button class="primary" id="btnAdd">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
-                    <path
-                      d="M1.41 0l-1.41 1.41.72.72 1.78 1.81-1.78 1.78-.72.69 1.41 1.44.72-.72 1.81-1.81 1.78 1.81.69.72 1.44-1.44-.72-.69-1.81-1.78 1.81-1.81.72-.72-1.44-1.41-.69.72-1.78 1.78-1.81-1.78-.72-.72z" />
+                  <svg class="icon">
+                      <use xlink:href="images/icons.svg#pencil-solid"></use>
                   </svg>
                   <span>Add New Person</span>
                 </button>
@@ -110,7 +109,7 @@ export default class extends AbstractView {
         <div class="grid-area">
           <div class="card">
             <div class="card-body">
-            <table class="mobile-col-2 mobile-col-5 mobile-col-6">
+            <table class="mobile-remove-col-1 mobile-remove-col-3">
               <tr>
                 <th>Id</th>
                 <th>Surname</th>
