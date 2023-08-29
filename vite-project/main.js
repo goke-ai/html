@@ -14,6 +14,7 @@ import _Navbar from './views/_Navbar'
 import _Footer from './views/_Footer'
 import Login from './views/Login'
 import Page404 from './views/Page404'
+import People from './views/People'
 
 document.querySelector('#app').innerHTML = `
 <div>
@@ -38,25 +39,24 @@ document.querySelector('#app').innerHTML = `
 const partialViews = async () => {
 
     // drawer
-    document.querySelector('.drawer').innerHTML = await(new _Drawer()).getHtml();
+    document.querySelector('.drawer').innerHTML = await (new _Drawer()).getHtml();
     drawerSys('.drawer-controller', '.drawer-wrapper');
 
     // sidebar
-    document.querySelector('.sidebar').innerHTML = await(new _Sidebar()).getHtml();
+    document.querySelector('.sidebar').innerHTML = await (new _Sidebar()).getHtml();
     drawerSys('.sidebar-controller', '.sidebar-wrapper');
 
     //color theme
     color_theme();
 
-
     // navbar
     // navSystem('nav.drawer-navigation a');
     // navSystem('nav.primary-navigation a');
-    document.querySelector('header').innerHTML = await(new _Navbar()).getHtml();
+    document.querySelector('header').innerHTML = await (new _Navbar()).getHtml();
     navSystem('nav.drawer-navigation a, nav.primary-navigation a');
 
     // footer
-    document.querySelector('footer').innerHTML = await(new _Footer()).getHtml();
+    document.querySelector('footer').innerHTML = await (new _Footer()).getHtml();
 }
 
 // navigation
@@ -85,6 +85,7 @@ const router = async () => {
         { path: "/posts/:id", view: PostDetail },
         { path: "/login", view: Login },
         { path: "/components", view: Components },
+        { path: "/people", view: People },
 
     ];
 
@@ -110,6 +111,8 @@ const router = async () => {
 
     document.querySelector('main').innerHTML = await view.getHtml();
 
+    view.onloaded();
+
     // console.log(location.pathname);
     // // const selector = data-link href="/register
     // const selector = `a[href="${location.pathname}"]`
@@ -121,6 +124,8 @@ const router = async () => {
     // console.log(activeElt);
 
 }
+
+
 
 window.addEventListener('popstate', router);
 
@@ -138,5 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // 
     router();
 
+    //
 
 });

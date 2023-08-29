@@ -21,14 +21,14 @@ export default class extends AbstractView {
             odio. </p>
 
           <div class="card">
-            <img src="images/background.jpg" alt="">
+            <img src="/images/background.jpg" alt="">
             <div class="card-body">
               at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
               illum praesentium eligendi?
             </div>
           </div>
           <div class="card-secondary">
-            <img src="images/planets-collide-wide-wallpaper-22488.jpg" alt="">
+            <img src="/images/planets-collide-wide-wallpaper-22488.jpg" alt="">
             <div class="card-body">
               Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
               adipisci eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat

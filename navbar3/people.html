@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="primary-layout flex">
+    <aside class="drawer">
+      <div class="drawer-wrapper" style="--icon-sz:3em;">
+        <div class="drawer-controller">
+          <span class="icon" style=" --_clr-icon-bg:var(--clr-accent)">
+          </span>
+        </div>
+        <div class="drawer-content">
+          <nav class="drawer-navigation" style="--_clr-icon-bg: var(--clr-body)">
+            <ul class="drawer-nav-list flex">
+              <li><a href="#"><span class="nav-item-wrapper"><span class="icon">X</span><span
+                      class="nav-item-text">Drawer Link
+                      1</span></span></a></li>
+              <li class="dropdown"><a href=""><span class="nav-item-wrapper">
+                    <span class="icon">X</span><span class="nav-item-text">Components</span></span>
+                </a>
+                <ul class="dropdown-list pop-right">
+                  <li><a href="#">Sub Drawer2 1</a></li>
+                  <li><a href="contact.html">Forms</a></li>
+                  <li><a href="components.html">Components</a></li>
+                  <li><a href="#">Sub Drawer2 4</a></li>
+                  <li><a href="#">Sub Drawer2 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span class="nav-item-wrapper"><span class="icon">X</span><span
+                      class="nav-item-text">Drawer Link
+                      3</span></span></a></li>
+              <li><a href="#"><span class="nav-item-wrapper"><span class="icon">X</span><span
+                      class="nav-item-text">Drawer Link
+                      4</span></span></a></li>
+              <li><a href="#"><span class="nav-item-wrapper"><span class="icon">X</span><span
+                      class="nav-item-text">Drawer Link
+                      5</span></span></a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </aside>
+
+    <section class="page">
+      <header>
+        <nav class="primary-navigation flex">
+          <div class="logo"><span class="icon">LOGO</span></div>
+
+          <input type="checkbox" class="navbar-controller navbar-controller-checkbox" name="navbar-controller"
+            id="navbar-controller">
+          <label class="navbar-controller navbar-controller-label" for="navbar-controller">
+            <span class="icon">
+            </span>
+          </label>
+
+          <ul class="primary-nav-list flex">
+            <li><a href="index.html">Home <span>🏡</span></a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown"><a href="#">Account</a>
+              <ul class="dropdown-list">
+                <li><a href="#">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="#">Sub Menu3 3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a class="active" href="#">Componets Menu Four</a>
+              <ul class="dropdown-list pop-down-left">
+                <li><a href="contact.html">Forms</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a class="active" href="people.html">People</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="wrapper flow">
+          <h1>People</h1>
+
+          <div class="new-area">
+            <div class="card">
+              <div class="card-body">
+                <div>
+                  <button class="primary">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+                      <path
+                        d="M1.41 0l-1.41 1.41.72.72 1.78 1.81-1.78 1.78-.72.69 1.41 1.44.72-.72 1.81-1.81 1.78 1.81.69.72 1.44-1.44-.72-.69-1.81-1.78 1.81-1.81.72-.72-1.44-1.41-.69.72-1.78 1.78-1.81-1.78-.72-.72z" />
+                    </svg>
+                    <span>Add New Person</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-area">
+            <div class="card">
+              <div class="card-body">
+                <table class="mobile-col-2 mobile-col-5 mobile-col-6">
+                  <tr>
+                    <th>Id</th>
+                    <th>Surname</th>
+                    <th>Firstname</th>
+                    <th>Gender</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Oladokun</td>
+                    <td>John</td>
+                    <td>Male</td>
+                    <td>
+                      <button class="primary" title="edit">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#pencil-solid"></use>
+                        </svg>
+                      </button>
+                      <button class="default" title="delete">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#trash-solid"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Oladokun</td>
+                    <td>John</td>
+                    <td>Male</td>
+                    <td>
+                      <button class="primary" title="edit">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#pencil-solid"></use>
+                        </svg>
+                      </button>
+                      <button class="default" title="delete">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#trash-solid"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Oladokun</td>
+                    <td>John</td>
+                    <td>Male</td>
+                    <td>
+                      <button class="primary" title="edit">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#pencil-solid"></use>
+                        </svg>
+                      </button>
+                      <button class="default" title="delete">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#trash-solid"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Oladokun</td>
+                    <td>John</td>
+                    <td>Male</td>
+                    <td>
+                      <button class="primary" title="edit">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#pencil-solid"></use>
+                        </svg>
+                      </button>
+                      <button class="default" title="delete">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#trash-solid"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Oladokun</td>
+                    <td>John</td>
+                    <td>Male</td>
+                    <td>
+                      <button class="primary" title="edit">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#pencil-solid"></use>
+                        </svg>
+                      </button>
+                      <button class="default" title="delete">
+                        <svg class="icon">
+                          <use xlink:href="images/icons.svg#trash-solid"></use>
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+                <div class="pagination">
+                  <ul>
+                    <li class="mobile"><a href="#">1</a></li>
+                    <li class="mobile"><a href="#">&Lang; </a></li>
+                    <li class="mobile"><a href="#">&langle;</a></li>
+                    <li><a class="active" style="--radius: 1vh" href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li class="mobile"><a class="active" style="--radius: 50vh" href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a class="active" style="--radius: 0.5rem" href="#">10</a></li>
+                    <li class="mobile"><a href="#">&rangle; </a></li>
+                    <li class="mobile"><a href="#">&Rang;</a></li>
+                    <li class="mobile"><a href="#">100</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-area">
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="edit">
+                  <div class="card-secondary  card-body">
+                    <form action="/submit_form" method="POST">
+
+                      <div class="form-row">
+                        <label for="id">Id</label>
+                        <input type="number" id="id" name="id" required>
+                      </div>
+
+                      <div class="form-row">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname" required>
+                      </div>
+
+                      <div class="form-row">
+                        <label for="firstname">Firstname</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                      </div>
+
+                      <div class="form-row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                      </div>
+
+                      <div class="form-row">
+                        <label>Gender</label>
+                        <div class="form-row-col-2">
+                          <div>
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="male">Male</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="female" name="gender" value="female" required>
+                            <label for="female">Female</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <label>Interests</label>
+                        <div class="form-row-col-2">
+                          <div>
+                            <input type="checkbox" id="reading" name="interests" value="reading">
+                            <label for="reading">Reading</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" id="gaming" name="interests" value="gaming">
+                            <label for="gaming">Gaming</label>
+                          </div>
+                          <div> <input type="checkbox" id="cooking" name="interests" value="cooking">
+                            <label for="cooking">Cooking</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                          <option value="usa">USA</option>
+                          <option value="canada">Canada</option>
+                          <option value="uk">UK</option>
+                          <option value="germany">Germany</option>
+                          <option value="australia">Australia</option>
+                          <!-- Add more options as needed -->
+                        </select>
+                      </div>
+
+                      <div class="form-row">
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+                      </div>
+
+                      <div class="form-row">
+                        <div></div>
+                        <div>
+                          <button class="primary" type="submit">Save</button>
+                          <button class="default" type="reset">Reset</button>
+                          <button class="secondary" type="button">Cancel</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-wrapper">
+          <span class="icon"><span>&#9818</span></span>
+          <span class="icon"><span>&#9812</span></span>
+          <span class="icon"><span>&#9962</span></span>
+        </div>
+      </footer>
+
+    </section>
+  </section>
+
+  <aside class="sidebar">
+    <div class="sidebar-wrapper collapse">
+      <div class="sidebar-content">
+        <h1>sidebar</h1>
+        <div class="form-area break-label">
+          <form action="/submit_form" method="POST">
+            <div class="form-row">
+              <label for="name2">Name</label>
+              <input type="text" id="name2" name="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="email2">Email</label>
+              <input type="email" id="email2" name="email" required>
+            </div>
+
+            <div class="form-row">
+              <label>Gender</label>
+              <div class="form-row-col-2">
+                <div>
+                  <input type="radio" id="male2" name="gender" value="male" required>
+                  <label for="male2">Male</label>
+                </div>
+                <div>
+                  <input type="radio" id="female2" name="gender" value="female" required>
+                  <label for="female2">Female</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Interests</label>
+              <div class="form-row-col-2">
+                <div>
+                  <input type="checkbox" id="reading2" name="interests" value="reading">
+                  <label for="reading2">Reading</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="gaming2" name="interests" value="gaming">
+                  <label for="gaming2">Gaming</label>
+                </div>
+                <div> <input type="checkbox" id="cooking2" name="interests" value="cooking">
+                  <label for="cooking2">Cooking</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="comments2">Comments of governors</label>
+              <textarea id="comments2" name="comments" rows="4" cols="40"></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="country2">Country</label>
+              <select id="country2" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="germany">Germany</option>
+                <option value="australia">Australia</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div></div>
+              <div>
+                <button class="primary" type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button class="secondary" type="button">Cancel</button>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Color</label>
+              <div class="color-picker">
+                <label for="neutral" class="visually-hidden">Neutral theme</label>
+                <input type="radio" id="neutral" name="themecolor" checked />
+
+                <label for="pink" class="visually-hidden">Pink theme</label>
+                <input type="radio" id="pink" name="themecolor" />
+
+                <label for="blue" class="visually-hidden">Blue theme</label>
+                <input type="radio" id="blue" name="themecolor" />
+
+                <label for="green" class="visually-hidden">Green theme</label>
+                <input type="radio" id="green" name="themecolor" />
+
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Theme</label>
+              <div class="color-picker">
+                <label for="light" class="visually-hidden">Light theme</label>
+                <input type="radio" id="light" name="theme" checked />
+
+                <label for="dark" class="visually-hidden">Dark theme</label>
+                <input type="radio" id="dark" name="theme" />
+
+              </div>
+            </div>
+
+          </form>
+
+
+        </div>
+      </div>
+      <div class="sidebar-controller">
+        <div class="btn icon" style="--icon-sz:3em; --_clr-icon-bg: var(--clr-accent)">
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <script src="../base.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

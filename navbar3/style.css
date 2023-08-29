@@ -13,7 +13,7 @@ body {
 }
 
 main {
-  /* min-height: 85vh;  */
+  /* min-height: 85vh; */
 }
 
 footer {
@@ -24,11 +24,10 @@ footer {
 .drawer {
   min-height: 100%;
   padding-inline: 0calc (var(--size-300) * 5);
-
   background: var(--clr-text);
   background-image: linear-gradient(180deg,
       var(--clr-primary) 0%,
-      var(--clr-card-bg) 50%);
+      var(--clr-card-bg) 20%);
 }
 
 @media (max-width: 35em) {
@@ -39,11 +38,8 @@ footer {
 
 .page {
   width: 100%;
-  /* background-color: bisque; */
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .sidebar {
@@ -116,10 +112,10 @@ footer {
   align-items: center;
   gap: var(--size-700);
 
-  background: hsla(var(--hsl-text), 0.1);
+  /* background: hsla(var(--hsl-text), 0.1); */
   background-image: linear-gradient(180deg,
       var(--clr-card-bg) 0%,
-      var(--clr-primary) 90%);
+      var(--clr-body-bg) 90%);
 }
 
 .logo {
@@ -573,4 +569,52 @@ input[type="radio"]:checked {
   background-color: var(--clr-card-bg);
   color: var(--clr-text);
   padding: var(--size-300);
+
+  --icon-sz: 4em;
+  --_clr-icon-border: var(
+  --clr-accent);
+  --icon-fs: 4em;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 1001; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay > div,
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* border: var(--clr-primary-400) solid var(--size-100); */
+  border-radius: 5px;
+  z-index: 1002;
+  overflow: auto;
+  /* width: clamp(50%, 70vw, 90%); */
+  /* height: clamp(50%, 70vh, 90%); */
+}
+
+.overlay .edit {
+  width: 100%;
+  /* height: 100%; */
+  margin: 0;
+}
+
+@media (max-width: 426px) {
+  .overlay > div,
+  .overlay-content {
+    width: 90%;
+    height: 90%;
+  }
 }

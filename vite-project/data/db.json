@@ -1,0 +1,29 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "surname": "Oladokun",
+      "firstname": "Emmanuel",
+      "gender": 1,
+      "email": "emmanuel.oladokun@ark.com"
+    },{
+      "id": 2,
+      "surname": "Abraham",
+      "firstname": "Seun",
+      "gender": 2,
+      "email": "seun.abraham@ark.com"
+    },{
+      "id": 3,
+      "surname": "Adesanya",
+      "firstname": "Nina",
+      "gender": 2,
+      "email": "nina.adesanya@ark.com"
+    },{
+      "id": 4,
+      "surname": "Ajanaku",
+      "firstname": "Ali",
+      "gender": 1,
+      "email": "ali.ajanaku@ark.com"
+    }
+  ]
+}
