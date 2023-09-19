@@ -2,39 +2,30 @@
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-400: hsl(0, 0%, 40%);
   --clr-neutral-900: hsla(0, 0%, 0%);
-
   --clr-primary-50: hsl(0, 0%, 95%);
   --clr-primary-100: hsl(0, 0%, 90%);
   --clr-primary-200: hsl(0, 0%, 70%);
   --clr-primary-250: hsl(0, 0%, 50%);
   --clr-primary-300: hsl(0, 0%, 25%);
   --clr-primary-400: hsl(0, 0%, 10%);
-
   --clr-primary-000: hsl(0, 100%, 70%);
   --clr-primary-090: hsl(90, 100%, 50%);
   --clr-primary-180: hsl(180, 100%, 50%);
   --clr-primary-270: hsl(270, 100%, 50%);
   --clr-primary-120: hsl(120, 100%, 50%);
   --clr-primary-240: hsl(240, 100%, 50%);
-
   /* --hsl-background: 0, 100%, 94%; */
   --hsl-text: 0, 0%, 90%;
   --hsl-background: 0, 0%, 10%;
-
   --clr-text: var(--clr-primary-400);
   --clr-card-bg: var(--clr-primary-200);
   --clr-body: var(--clr-primary-300);
   --clr-body-bg: var(--clr-primary-100);
   --clr-primary: var(--clr-primary-400);
   --clr-secondary: var(--clr-primary-250);
-
   --clr-accent: var(--clr-primary-180);
-
-  --ff-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --ff-accent: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
+  --ff-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --ff-accent: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --size-100: clamp(0.64em, calc(0.66em + -0.02vw), 0.65em);
   --size-200: clamp(0.78em, calc(0.77em + 0.03vw), 0.8em);
   --size-300: clamp(0.94em, calc(0.92em + 0.11vw), 1em);
@@ -44,7 +35,6 @@
   --size-700: clamp(1.94em, calc(1.77em + 0.87vw), 2.44em);
   --size-800: clamp(2.33em, calc(2.08em + 1.25vw), 3.05em);
   --size-900: clamp(2.8em, calc(2.45em + 1.77vw), 3.82em);
-
   --fs-100: clamp(0.64rem, calc(0.66rem + -0.02vw), 0.65rem);
   --fs-200: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem);
   --fs-300: clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem);
@@ -54,16 +44,15 @@
   --fs-700: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
   --fs-800: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
   --fs-900: clamp(2.8rem, calc(2.45rem + 1.77vw), 3.82rem);
-
   /* --fs-100: calc(var(--fs-100) / 2.0);
-    --fs-200: calc(var(--fs-200) / 2.0);
-    --fs-300: calc(var(--fs-300) / 2.0);
-    --fs-400: calc(var(--fs-400) / 2.0);
-    --fs-500: calc(var(--fs-500) / 2.0);
-    --fs-600: calc(var(--fs-600) / 2.0);
-    --fs-700: calc(var(--fs-700) / 2.0);
-    --fs-800: calc(var(--fs-800) / 2.0);
-    --fs-900: calc(var(--fs-900) / 2.0); */
+--fs-200: calc(var(--fs-200) / 2.0);
+--fs-300: calc(var(--fs-300) / 2.0);
+--fs-400: calc(var(--fs-400) / 2.0);
+--fs-500: calc(var(--fs-500) / 2.0);
+--fs-600: calc(var(--fs-600) / 2.0);
+--fs-700: calc(var(--fs-700) / 2.0);
+--fs-800: calc(var(--fs-800) / 2.0);
+--fs-900: calc(var(--fs-900) / 2.0); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -72,9 +61,7 @@
     /* --clr-primary-200: hsl(0, 0%, 25%); */
     /* --clr-primary-300: hsl(0, 0%, 70%); */
     /* --clr-primary-400: hsl(0, 0%, 90%); */
-
     /* --hsl-background: 0, 0%, 5%; */
-
     /* --clr-text: var(--clr-primary-400); */
     /* --clr-body: var(--clr-primary-300); */
     /* --clr-body-bg: var(--clr-primary-100); */
@@ -86,17 +73,14 @@
     --clr-neutral-900: hsl(0, 0%, 100%);
     --clr-neutral-400: hsl(0, 0%, 40%);
     --clr-neutral-100: hsla(0, 0%, 0%);
-
     --clr-primary-400: hsl(0, 0%, 90%);
     --clr-primary-300: hsl(0, 0%, 70%);
     --clr-primary-250: hsl(0, 0%, 50%);
     --clr-primary-200: hsl(0, 0%, 25%);
     --clr-primary-100: hsl(0, 0%, 10%);
     --clr-primary-50: hsl(0, 0%, 5%);
-
     --hsl-text: 0, 0%, 10%;
     --hsl-background: 0, 0%, 90%;
-
     /* --clr-primary-000: hsl(0, 100%, 50%); */
     --clr-primary-090: hsl(90, 100%, 50%);
     --clr-primary-180: hsl(180, 100%, 50%);
@@ -173,11 +157,13 @@ p {
 
 a {
   color: var(--clr-primary);
+  cursor: pointer;
 }
 
 a:hover,
 a:focus {
-  color: var(--clr-accent);
+  /*color: var(--clr-accent);*/
+  filter: invert(1);
 }
 
 ::marker {
@@ -216,8 +202,9 @@ button.default {
 }
 
 button:hover.default {
-  --_clr-bg: var(--clr-card-bg);
-  --_clr-fg: var(--clr-accent);
+  /*--_clr-bg: var(--clr-card-bg);*/
+  /*--_clr-fg: var(--clr-accent);*/
+  filter: invert(1);
 }
 
 button.primary {
@@ -226,8 +213,9 @@ button.primary {
 }
 
 button:hover.primary {
-  --_clr-bg: var(--clr-body-bg);
-  --_clr-fg: var(--clr-text);
+  /*--_clr-bg: var(--clr-body-bg);*/
+  /*--_clr-fg: var(--clr-text);*/
+  filter: invert(1);
 }
 
 button.secondary {
@@ -236,8 +224,25 @@ button.secondary {
 }
 
 button:hover.secondary {
-  --_clr-bg: var(--clr-text);
-  --_clr-fg: var(--clr-secondary);
+  /*--_clr-bg: var(--clr-text);*/
+  /*--_clr-fg: var(--clr-secondary);*/
+  filter: invert(1);
+}
+
+button:disabled,
+button:hover:disabled {
+  background-color: rgba(239, 239, 239, 0.3);
+  color: rgba(16, 16, 16, 0.3);
+  border-color: rgba(118, 118, 118, 0.3);
+  filter: none;
+  cursor: default;
+}
+
+
+html.dark button:disabled {
+  background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+  color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+  border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
 }
 
 input[type="radio"],
@@ -267,6 +272,8 @@ h2 {
   --flow-space: 1em;
 }
 
+nav {}
+
 nav li {
   white-space: nowrap;
   /* margin: 0.25rem; */
@@ -291,7 +298,6 @@ nav a {
 table {
   border-collapse: collapse;
   width: 100%;
-
   --_clr-icon-fg: var(--clr-accent)
 }
 
@@ -311,6 +317,8 @@ table tr:nth-child(even) {
 
 table tr:hover {
   background-color: var(--clr-card-bg);
+  filter: invert(1);
+  /*filter: hue-rotate(90deg);*/
 }
 
 table th {
@@ -365,6 +373,7 @@ table th {
 }
 
 .flex,
+.flex-column,
 .flex-group {
   display: flex;
   gap: var(--gap, var(--size-300));
@@ -374,8 +383,11 @@ table th {
   flex: 1 1 0;
 }
 
-@media (max-width: 35em) {
+.flex-column {
+  flex-direction: column;
+}
 
+@media (max-width: 35em) {
   .wrapper {
     width: 100%;
     margin-inline: auto;
@@ -385,8 +397,6 @@ table th {
   .flex-group {
     flex-wrap: wrap;
   }
-
-
 }
 
 .flow>*+* {
@@ -395,6 +405,10 @@ table th {
 
 .page {
   background-color: hsl(var(--hsl-background), 0.9);
+}
+
+.no-border {
+  border: none;
 }
 
 .btn {
@@ -415,7 +429,7 @@ button:has(.icon:only-child) {
   width: var(--icon-sz, 1em);
   height: var(--icon-sz, 1em);
   aspect-ratio: 1;
-  /* padding: calc(var(--size-300) * 2); */
+  /* padding: calc(var(--size-300) * 1); */
   border: 1px solid var(--_clr-icon-border);
   color: var(--_clr-icon-fg, var(--clr-body-bg));
   fill: var(--_clr-icon-fg, var(--clr-body-bg));
@@ -445,7 +459,6 @@ button:has(.icon:only-child) {
   -o-transform: rotate(var(--deg));
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
   transform: rotate(var(--deg));
 }
 
@@ -467,6 +480,11 @@ button:has(.icon:only-child) {
   margin-block: var(--size-400, 0.5rem);
 }
 
+.form-control-one {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 .sidebar .form-row {
   /* Vertically align label and input */
   margin-block: var(--size-200, 0.5rem);
@@ -484,7 +502,6 @@ button:has(.icon:only-child) {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-
   flex-wrap: wrap;
 }
 
@@ -547,46 +564,72 @@ button:has(.icon:only-child) {
   }
 }
 
-/* card */
-.card {
+/* card and accordion */
+.card,
+.accordion,
+.tile {
   color: var(--clr-text);
   background-color: var(--clr-card-bg);
-
   /* padding: var(--size-600); */
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 hsl(var(--hsl-text), 0.8);
   transition: 0.3s;
 }
 
-.card-secondary {
+.card-secondary,
+.accordion-secondary,
+.tile-secondary {
   color: var(--clr-text);
   background-color: var(--clr-body-bg);
-
-  /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 hsl(var(--hsl-text), 0.8);
   transition: 0.3s;
 }
 
 .card:hover,
-.card-secondary:hover {
+.card-secondary:hover,
+.accordion:hover,
+.accordion-secondary:hover,
+.tile:hover,
+.tile-secondary:hover {
   box-shadow: 0 8px 16px 0 hsl(var(--hsl-text), 0.8);
 }
 
 .card-header,
 .card-body,
-.card-footer {
+.card-footer,
+.accordion-header,
+.accordion-body,
+.accordion-footer {
   padding: var(--size-300) var(--size-600);
 }
 
-.card-header {
+.card-header,
+.accordion-header {
   background-color: var(--clr-accent);
   color: var(--clr-body-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-footer {
+.card-footer,
+.accordion-footer {
   background-color: var(--clr-primary);
   color: var(--clr-text);
 }
+
+.accordion-body {
+  display: none;
+}
+
+.accordion-header>label {
+  width: 100%
+}
+
+.accordion:has(input[type="checkbox"]:checked)>.accordion-body {
+  display: block;
+}
+
 
 /* pagination */
 .pagination {
@@ -605,14 +648,14 @@ button:has(.icon:only-child) {
   padding: calc(var(--_padding) / 2) var(--_padding);
   /* border: 1px solid var(--clr-card-bg); */
   box-shadow: 0 1px 2px 0 hsl(var(--hsl-text), 0.8);
-
   background-color: var(--clr-body-bg);
   color: var(--clr-body);
-
   text-decoration: none;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
+.pagination a[data-active],
 .pagination a.active {
   background-color: var(--clr-accent);
   color: var(--clr-body-bg);
@@ -627,23 +670,165 @@ button:has(.icon:only-child) {
 @media (max-width: 35em) {
   .pagination a.active {
     padding: calc(var(--_padding) / 2) var(--_padding);
-
     border-radius: var(--radius);
   }
 
   /* .pagination li:nth-child(n+4){
-        display: none;
-    }
+  display: none;
+}
 
-    .pagination li:nth-child(n+9){
-        display: revert;
-    }
-    
-    .pagination li:nth-child(6){
-        display: revert;
-    } */
+.pagination li:nth-child(n+9){
+  display: revert;
+}
+
+.pagination li:nth-child(6){
+  display: revert;
+} */
 
   .pagination li:not(.mobile) {
     display: none;
+  }
+}
+
+.tile {
+  position: relative;
+  /* background: var(--clr-card-bg); */
+  display: inline-block;
+  padding: 2em;
+  margin: 1em;
+}
+
+.tile-note {
+  --_width: 3em;
+  --_height: 3em;
+  --_top: 0%;
+  --_right: 0%;
+  position: absolute;
+  top: calc(var(--_top) - calc(var(--_height) / 2));
+  right: calc(var(--_right) - calc(var(--_width) / 2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-accent);
+  color: var(--clr-card-bg);
+  min-width: var(--_width);
+  min-height: var(--_height);
+  border-radius: 50%;
+}
+
+.tile-note:hover {
+  filter: invert(1);
+}
+
+a:hover:has(> .tile-note),
+a:focus:has(> .tile-note) {
+  filter: none;
+}
+
+/*item-selector*/
+.item-selector {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: var(--_gap, 0.5em);
+  width: fit-content;
+}
+
+.item-selector> :nth-child(even) {
+  text-align: center;
+}
+
+
+/* overlay */
+.overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.overlay>div,
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  /* border: var(--clr-primary-400) solid var(--size-100); */
+  border-radius: 5px;
+  z-index: 1002;
+  overflow: auto;
+  /* width: clamp(50%, 70vw, 90%); */
+  /* height: clamp(50%, 70vh, 90%); */
+}
+
+.overlay .edit {
+  width: 100%;
+  /* height: 100%; */
+  margin: 0;
+}
+
+@media (max-width: 426px) {
+
+  .overlay>div,
+  .overlay-content {
+    width: 70%;
+    height: 90%;
+  }
+}
+
+/* messenger */
+.message {
+  padding: 1em;
+  border-radius: 0.2em;
+  margin-block: 0.5em;
+  background-color: var(--clr-primary, black);
+  color: var(--clr-accent, white);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  animation-name: animessage;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+
+.error {
+  filter: invert(1);
+}
+
+@keyframes animessage {
+  0% {
+    right: 0;
+    background-color: var(--clr-primary, black);
+    color: var(--clr-accent, white);
+  }
+
+  /*25% {
+    right: 0;
+    filter: hue-rotate(45deg);
+ }*/
+
+  50% {
+    right: 0;
+    filter: hue-rotate(180deg);
+  }
+
+  /*75% {
+    right: 0;
+    filter: hue-rotate(180deg);
+}*/
+
+  100% {
+    right: 0;
+    /*filter: invert(1);*/
+    filter: hue-rotate(360deg);
   }
 }
