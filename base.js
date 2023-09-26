@@ -13,17 +13,28 @@ function findAncestor(element, selector) {
 
 function color_theme() {
     ///+
-    const colorThemes = document.querySelectorAll('[name="theme"]');
+    const colorThemes = document.querySelectorAll('[name="themecolor"]');
+    const themes = document.querySelectorAll('[name="theme"]');
 
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
+    let color = localStorage.getItem("color");
     let theme = localStorage.getItem("theme");
 
-    colorThemes.forEach((themeElt) => {
+    colorThemes.forEach((e) => {
+        if (e.id === color) {
+            e.checked = true;
+        }
+    });
+    themes.forEach((themeElt) => {
         if (themeElt.id === theme) {
             themeElt.checked = true;
         }
     });
+
+    if (color == null) {
+        color = 'neutral';
+    }
 
     if (theme == null) {
         if (prefersDarkScheme) {
@@ -33,15 +44,23 @@ function color_theme() {
         }
     }
 
-    document.documentElement.className = theme;
+    document.documentElement.className = `${color} ${theme}`;
 
     colorThemes.forEach((themeElt) => {
         themeElt.addEventListener('click', (e) => {
 
+            color = themeElt.id;
+            localStorage.setItem("color", color);
+            document.documentElement.className = `${color} ${theme}`;
+        });
+    });
+
+    themes.forEach((themeElt) => {
+        themeElt.addEventListener('click', (e) => {
+
             theme = themeElt.id;
             localStorage.setItem("theme", theme);
-            document.documentElement.className = theme;
-
+            document.documentElement.className = `${color} ${theme}`;
         });
     });
 
