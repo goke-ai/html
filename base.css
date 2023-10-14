@@ -193,8 +193,16 @@ input:disabled,
 button:disabled,
 textarea:disabled,
 select:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   border-color: var(--clr-body-bg);
+}
+
+button:disabled {
+  cursor: default;
+}
+
+button:hover:disabled {
+  filter: none !important;
 }
 
 button {
@@ -244,19 +252,19 @@ button:hover.secondary {
 }
 
 /*button:disabled,
-  button:hover:disabled {
-      background-color: rgba(239, 239, 239, 0.3);
-      color: rgba(16, 16, 16, 0.3);
-      border-color: rgba(118, 118, 118, 0.3);
-      filter: none;
-      cursor: default;
-  }
+button:hover:disabled {
+    background-color: rgba(239, 239, 239, 0.3);
+    color: rgba(16, 16, 16, 0.3);
+    border-color: rgba(118, 118, 118, 0.3);
+    filter: none;
+    cursor: default;
+}
 
 
 html.dark button:disabled {
-  background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
-  color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
-  border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+color: -internal-light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+border-color: -internal-light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
 }*/
 
 input[type="radio"],
@@ -315,60 +323,113 @@ table {
   --_clr-icon-fg: var(--clr-accent)
 }
 
+.grid-table {
+  --_col-num: 2;
+  display: grid;
+  grid-template-columns: repeat(var(--_col-num), auto);
+  gap: 1px;
+  width: fit-content;
+  background-color: var(--clr-secondary);
+  border: 1px solid var(--clr-secondary);
+}
+
+.grid-row-wrapper {
+  display: contents;
+}
+
 td,
 th {
   border: 1px solid var(--clr-secondary);
   padding: var(--size-100);
 }
 
-table tr:nth-child(odd) {
+.grid-row-wrapper>* {
+  display: flex;
+  align-items: center;
+  padding: var(--size-100);
+}
+
+
+table tr:nth-child(odd),
+.grid-row-wrapper:nth-child(odd)>* {
   background-color: var(--clr-card-bg);
 }
 
-table tr:nth-child(even) {
+table tr:nth-child(even),
+.grid-row-wrapper:nth-child(even)>* {
   background-color: var(--clr-body-bg);
+  /*text-align: center;*/
 }
 
-table tr:hover {
+table tr:hover,
+.grid-row-wrapper:hover>* {
   background-color: var(--clr-card-bg);
   filter: invert(1);
   /*filter: hue-rotate(90deg);*/
 }
 
-table th {
+table tr:hover td:has(img),
+table tr:hover td:has(picture),
+table tr:hover td:has(svg),
+table tr:hover td:has(video),
+.grid-row-wrapper:hover>*:has(img),
+.grid-row-wrapper:hover>*:has(picture),
+.grid-row-wrapper:hover>*:has(svg),
+.grid-row-wrapper:hover>*:has(video) {
+  filter: invert(1);
+}
+
+table th,
+.grid-table .grid-th,
+.grid-table .grid-row-wrapper:first-child>* {
   padding-block: var(--size-300);
-  text-align: left;
+  /* text-align: left; */
   background-color: var(--clr-accent);
   color: var(--clr-body-bg);
-}
-
-table th button:has(.icon) {
-  padding: 0.1em !important;
-}
-
-th label input[type=checkbox],
-th label+input[type=checkbox] {
-  display: none;
-}
-
-th:has(input[type=checkbox]) .search {
-  display: none;
   position: relative;
 }
 
-th:has(input[type=checkbox]:checked) .search {
+.grid-table .grid-th {
   display: block;
 }
 
-th:has(input[type=checkbox]) .search input {
-  position: absolute;
-  font-weight: lighter;
-
-  background-color: var(--clr-accent);
-  opacity: 0.8;
-
+table th button:has(.icon),
+.grid-table .grid-th button:has(.icon) {
+  padding: 0.1em !important;
 }
 
+
+th label input[type=checkbox],
+th label+input[type=checkbox],
+.grid-th label input[type=checkbox],
+.grid-th label+input[type=checkbox] {
+  display: none;
+}
+
+th:has(input[type=checkbox]) .search,
+.grid-th:has(input[type=checkbox]) .search {
+  display: none;
+  position: absolute;
+  /* left: 0; */
+}
+
+th:has(input[type=checkbox]:checked) .search,
+.grid-th:has(input[type=checkbox]:checked) .search {
+  display: block;
+}
+
+th:has(input[type=checkbox]) .search input,
+.grid-th:has(input[type=checkbox]) .search input {
+  font-weight: lighter;
+  background-color: var(--clr-accent);
+  opacity: 0.8;
+  /* width: 100%; */
+}
+
+th:has(input[type=checkbox]:checked),
+.grid-th:has(input[type=checkbox]:checked) {
+  z-index: 99;
+}
 
 @media (max-width: 35em) {
 
@@ -393,6 +454,37 @@ th:has(input[type=checkbox]) .search input {
   table.mobile-remove-col-10 tr> :nth-child(10) {
     display: none;
   }
+
+  .grid-table {
+    --_col-num: 1 !important;
+  }
+
+  .grid-table .grid-row-wrapper:first-child>* {
+    /* display: none; */
+  }
+
+  th:has(input[type=checkbox]) .search,
+  .grid-th:has(input[type=checkbox]) .search {
+    --_font-size: 1em;
+    --_padding: var(--size-100);
+    --_icon_padding: 0.1em;
+    position: absolute;
+    top: calc(50% - var(--_padding) - calc(var(--_font-size) / 2));
+    left: calc(0% + var(--_padding) + var(--_font-size) + calc(var(--_icon_padding) * 2));
+  }
+
+  .grid-th:has(input[type=checkbox]) .search input {
+    background-color: var(--clr-accent);
+    opacity: 1;
+  }
+}
+
+.column-control {
+  display: none;
+}
+
+table:has(input[type="checkbox"].column-controller:checked) .column-control {
+  display: revert;
 }
 
 /* classes */
@@ -415,10 +507,12 @@ th:has(input[type=checkbox]) .search input {
 }
 
 .flex,
+.flex-center,
 .flex-column,
+.flex-column-center,
 .flex-group {
   display: flex;
-  gap: var(--gap, var(--size-300));
+  gap: var(--gap, var(--size-100));
 }
 
 .flex-group>* {
@@ -427,6 +521,14 @@ th:has(input[type=checkbox]) .search input {
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-column-center {
+  justify-content: center;
 }
 
 @media (max-width: 35em) {
@@ -448,6 +550,8 @@ th:has(input[type=checkbox]) .search input {
 .page {
   background-color: hsl(var(--hsl-background), 0.9);
 }
+
+
 
 .no-border {
   border: none;
@@ -670,6 +774,20 @@ button:has(.icon:only-child) {
   color: var(--clr-text);
 }
 
+.dialog,
+.dialog-secondary {
+  --_hsl-text: 0, 0%, 0%;
+  --_clr-text: black;
+  --_clr-bg: white;
+
+}
+
+.dialog-body {
+
+  height: 80vh;
+  overflow-y: scroll;
+}
+
 .accordion-body {
   display: none;
 }
@@ -678,9 +796,153 @@ button:has(.icon:only-child) {
   width: 100%
 }
 
-.accordion:has(input[type="checkbox"]:checked)>.accordion-body {
+.accordion-header:has(input[type="checkbox"]:checked)+.accordion-body {
   display: block;
 }
+
+.wizard,
+.carousel {
+  color: var(--clr-text);
+  background-color: var(--clr-card-bg);
+  /* padding: var(--size-600); */
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 hsl(var(--hsl-text), 0.8);
+  transition: 0.3s;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.wizard {
+  --wizard-height: 50vh;
+  height: var(--wizard-height);
+}
+
+.carousel {
+  min-height: 20vh;
+}
+
+.wizard-body,
+.carousel-body {
+  height: 100%;
+}
+
+.wizard-item {
+  height: calc(var(--wizard-height) * 0.9);
+  overflow-y: auto;
+}
+
+.wizard-item,
+.carousel-item,
+.wizard-controller,
+.carousel-controller {
+  padding: var(--size-300) var(--size-600);
+}
+
+.wizard-controller,
+.carousel-controller {
+  display: flex;
+  gap: 0.25em;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-accent);
+}
+
+.wizard-item:nth-child(odd),
+.carousel-item:nth-child(odd) {
+  background-color: var(--clr-body-bg);
+}
+
+.wizard-item:nth-child(even),
+.carousel-item:nth-child(even) {
+  background-color: var(--clr-card-bg);
+  /*text-align: center;*/
+}
+
+.wizard-item,
+.carousel-item {
+  display: none;
+}
+
+input[type=radio].wizard-page-controller{
+  display: none;
+}
+
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(1)) .wizard-page-controller:nth-child(1),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(1)) .wizard-page-controller:nth-child(2) {
+  display: block;
+}
+
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-page-controller:nth-child(1),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-page-controller:nth-child(2),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-page-controller:nth-child(3) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-page-controller:nth-child(2),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-page-controller:nth-child(3),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-page-controller:nth-child(4) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-page-controller:nth-child(3),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-page-controller:nth-child(4),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-page-controller:nth-child(5) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-page-controller:nth-child(4),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-page-controller:nth-child(5),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-page-controller:nth-child(6) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-page-controller:nth-child(5),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-page-controller:nth-child(6),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-page-controller:nth-child(7) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-page-controller:nth-child(6),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-page-controller:nth-child(7),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-page-controller:nth-child(8) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-page-controller:nth-child(7),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-page-controller:nth-child(8),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-page-controller:nth-child(9) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-page-controller:nth-child(8),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-page-controller:nth-child(9),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-page-controller:nth-child(10) {
+  display: block;
+}
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(10)) .wizard-page-controller:nth-child(9),
+.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(10)) .wizard-page-controller:nth-child(10) {
+  display: block;
+}
+
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(1)) .wizard-item:nth-child(1),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-item:nth-child(2),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-item:nth-child(3),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-item:nth-child(4),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-item:nth-child(5),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-item:nth-child(6),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-item:nth-child(7),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-item:nth-child(8),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-item:nth-child(9),
+.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(10)) .wizard-item:nth-child(10) {
+  display: block;
+}
+
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(1)) .carousel-item:nth-child(1),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(2)) .carousel-item:nth-child(2),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(3)) .carousel-item:nth-child(3),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(4)) .carousel-item:nth-child(4),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(5)) .carousel-item:nth-child(5),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(6)) .carousel-item:nth-child(6),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(7)) .carousel-item:nth-child(7),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(8)) .carousel-item:nth-child(8),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(9)) .carousel-item:nth-child(9),
+.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(10)) .carousel-item:nth-child(10) {
+  display: block;
+}
+
 
 
 /* pagination */
@@ -726,15 +988,15 @@ button:has(.icon:only-child) {
   }
 
   /* .pagination li:nth-child(n+4){
-  display: none;
+display: none;
 }
 
 .pagination li:nth-child(n+9){
-  display: revert;
+display: revert;
 }
 
 .pagination li:nth-child(6){
-  display: revert;
+display: revert;
 } */
 
   .pagination li:not(.mobile) {
@@ -745,9 +1007,17 @@ button:has(.icon:only-child) {
 .tile {
   position: relative;
   /* background: var(--clr-card-bg); */
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 2em;
   margin: 1em;
+  display: flex;
+  gap: var(--size-100);
+  align-items: center;
+  --_clr-icon-fg: var(--clr-accent);
+}
+
+.tile .icon {
+  --icon-sz: 2em;
 }
 
 .tile-note {
@@ -777,6 +1047,10 @@ a:focus:has(> .tile-note) {
   filter: none;
 }
 
+a:has(> .tile) {
+  text-decoration: none;
+}
+
 /*item-selector*/
 .item-selector {
   display: grid;
@@ -785,54 +1059,6 @@ a:focus:has(> .tile-note) {
   width: fit-content;
 }
 
-.grid-table {
-  --_col-num: 2;
-  display: grid;
-  grid-template-columns: repeat(var(--_col-num), auto);
-  gap: 0.1em;
-  width: fit-content;
-}
-
-.grid-table .grid-row-wrapper:first-child>* {
-  background-color: var(--clr-accent);
-  color: var(--clr-body-bg);
-  padding-block: var(--size-300);
-}
-
-@media (max-width: 35em) {
-  .grid-table {
-    --_col-num: 1 !important;
-  }
-
-  .grid-table .grid-row-wrapper:first-child>* {
-    display: none;
-  }
-}
-
-.grid-row-wrapper {
-  display: contents;
-}
-
-.grid-row-wrapper>* {
-  display: flex;
-  align-items: center;
-  padding: var(--size-100);
-}
-
-.grid-row-wrapper:nth-child(odd)>* {
-  background-color: var(--clr-card-bg);
-}
-
-.grid-row-wrapper:nth-child(even)>* {
-  background-color: var(--clr-body-bg);
-  /*text-align: center;*/
-}
-
-.grid-row-wrapper:hover>* {
-  background-color: var(--clr-card-bg);
-  filter: invert(1);
-  /*filter: hue-rotate(90deg);*/
-}
 
 /*multiselector*/
 
@@ -934,9 +1160,9 @@ a:focus:has(> .tile-note) {
   }
 
   /*25% {
-      right: 0;
-      filter: hue-rotate(45deg);
-   }*/
+    right: 0;
+    filter: hue-rotate(45deg);
+ }*/
 
   50% {
     right: 0;
@@ -944,9 +1170,9 @@ a:focus:has(> .tile-note) {
   }
 
   /*75% {
-      right: 0;
-      filter: hue-rotate(180deg);
-  }*/
+    right: 0;
+    filter: hue-rotate(180deg);
+}*/
 
   100% {
     right: 0;
