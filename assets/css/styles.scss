@@ -25,7 +25,7 @@ footer {
 
 .drawer {
     min-height: 100%;
-    padding-inline: calc(var(--size-300) * 5);
+    padding-inline: var(--size-300);
     background: var(--clr-text);
     background-image: linear-gradient(180deg, var(--clr-primary) 0%, var(--clr-card-bg) 20%);
 }
@@ -50,7 +50,7 @@ footer {
 /* drawer */
 .drawer-wrapper {
     display: flex;
-    gap: calc(var(--size-300) * 5);
+    gap: var(--size-300);
     flex-direction: column;
     /* justify-content: space-between; */
     padding: 0.5rem;
@@ -121,7 +121,7 @@ footer {
 .logo {
     min-width: 250px;
     min-height: 50px;
-    margin: calc(var(--size-300) * 5);
+    margin: var(--size-300);
     outline: 2px solid var(--clr-accent);
     background-color: var(--clr-primary);
     padding: 1em;
@@ -198,7 +198,7 @@ footer {
 .dropdown-list.pop-right li {
     display: block;
     /* margin: 0; */
-    /* padding: calc(var(--size-300) * 5); */
+    /* padding: var(--size-300); */
 }
 
 li.dropdown:hover .dropdown-list {
