@@ -812,7 +812,7 @@ button:has(.icon:only-child) {
 
 .wizard {
   --wizard-height: 50vh;
-  height: var(--wizard-height);
+  min-height: var(--wizard-height);
 }
 
 .carousel {
