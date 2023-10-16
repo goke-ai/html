@@ -779,11 +779,9 @@ button:has(.icon:only-child) {
   --_hsl-text: 0, 0%, 0%;
   --_clr-text: black;
   --_clr-bg: white;
-
 }
 
 .dialog-body {
-
   height: 80vh;
   overflow-y: scroll;
 }
@@ -839,13 +837,20 @@ button:has(.icon:only-child) {
 }
 
 .wizard-controller,
+.wizard-controller>*,
 .carousel-controller {
   display: flex;
   gap: 0.25em;
   justify-content: center;
   align-items: center;
+  color: var(--clr-body-bg);
   background-color: var(--clr-accent);
 }
+
+.wizard-controller {
+  flex-direction: column;
+}
+
 
 .wizard-item:nth-child(odd),
 .carousel-item:nth-child(odd) {
@@ -863,70 +868,63 @@ button:has(.icon:only-child) {
   display: none;
 }
 
-input[type=radio].wizard-page-controller{
+.wizard-controller label,
+.wizard-page-controller,
+.wizard-page-controller-label {
   display: none;
 }
 
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(1)) .wizard-page-controller:nth-child(1),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(1)) .wizard-page-controller:nth-child(2) {
+.wizard-controller input {
+  outline-color: var(--clr-body-bg);
+}
+
+.wizard-page-controller-label span {
+  display: none;
+}
+
+.wizard-page-controller-label input[type=radio] {
+  display: none;
+}
+
+.wizard-controller:has(.show-text) .wizard-page-controller-label span {
   display: block;
 }
 
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-page-controller:nth-child(1),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-page-controller:nth-child(2),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-page-controller:nth-child(3) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-page-controller:nth-child(2),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-page-controller:nth-child(3),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-page-controller:nth-child(4) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-page-controller:nth-child(3),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-page-controller:nth-child(4),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-page-controller:nth-child(5) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-page-controller:nth-child(4),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-page-controller:nth-child(5),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-page-controller:nth-child(6) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-page-controller:nth-child(5),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-page-controller:nth-child(6),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-page-controller:nth-child(7) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-page-controller:nth-child(6),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-page-controller:nth-child(7),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-page-controller:nth-child(8) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-page-controller:nth-child(7),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-page-controller:nth-child(8),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-page-controller:nth-child(9) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-page-controller:nth-child(8),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-page-controller:nth-child(9),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-page-controller:nth-child(10) {
-  display: block;
-}
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(10)) .wizard-page-controller:nth-child(9),
-.wizard-controller:has(input[type=radio].wizard-page-controller:checked:nth-child(10)) .wizard-page-controller:nth-child(10) {
+.wizard-controller:has(.show-radio) .wizard-page-controller-label input[type=radio] {
   display: block;
 }
 
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(1)) .wizard-item:nth-child(1),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(2)) .wizard-item:nth-child(2),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(3)) .wizard-item:nth-child(3),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(4)) .wizard-item:nth-child(4),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(5)) .wizard-item:nth-child(5),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(6)) .wizard-item:nth-child(6),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(7)) .wizard-item:nth-child(7),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(8)) .wizard-item:nth-child(8),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(9)) .wizard-item:nth-child(9),
-.wizard:has(input[type=radio].wizard-page-controller:checked:nth-child(10)) .wizard-item:nth-child(10) {
+.wizard-controller input:checked,
+.wizard-controller label:has(input:checked) {
+  color: var(--clr-body);
+  outline-color: var(--clr-body);
+}
+
+.wizard-controller label:has(input:checked),
+.wizard-controller label:has(input:checked)+label,
+/* previous sibling */
+.wizard-controller-labels:has(label:nth-child(2)>input:checked)>label:nth-child(1),
+.wizard-controller-labels:has(label:nth-child(3)>input:checked)>label:nth-child(2),
+.wizard-controller-labels:has(label:nth-child(4)>input:checked)>label:nth-child(3),
+.wizard-controller-labels:has(label:nth-child(5)>input:checked)>label:nth-child(4),
+.wizard-controller-labels:has(label:nth-child(6)>input:checked)>label:nth-child(5),
+.wizard-controller-labels:has(label:nth-child(7)>input:checked)>label:nth-child(6),
+.wizard-controller-labels:has(label:nth-child(8)>input:checked)>label:nth-child(7),
+.wizard-controller-labels:has(label:nth-child(9)>input:checked)>label:nth-child(8),
+.wizard-controller-labels:has(label:nth-child(10)>input:checked)>label:nth-child(9) {
+  display: block;
+}
+
+.wizard:has(.wizard-controller-labels label:nth-child(1)>input:checked) .wizard-item:nth-child(1),
+.wizard:has(.wizard-controller-labels label:nth-child(2)>input:checked) .wizard-item:nth-child(2),
+.wizard:has(.wizard-controller-labels label:nth-child(3)>input:checked) .wizard-item:nth-child(3),
+.wizard:has(.wizard-controller-labels label:nth-child(4)>input:checked) .wizard-item:nth-child(4),
+.wizard:has(.wizard-controller-labels label:nth-child(5)>input:checked) .wizard-item:nth-child(5),
+.wizard:has(.wizard-controller-labels label:nth-child(6)>input:checked) .wizard-item:nth-child(6),
+.wizard:has(.wizard-controller-labels label:nth-child(7)>input:checked) .wizard-item:nth-child(7),
+.wizard:has(.wizard-controller-labels label:nth-child(8)>input:checked) .wizard-item:nth-child(8),
+.wizard:has(.wizard-controller-labels label:nth-child(9)>input:checked) .wizard-item:nth-child(9),
+.wizard:has(.wizard-controller-labels label:nth-child(10)>input:checked) .wizard-item:nth-child(10) {
   display: block;
 }
 
@@ -1179,4 +1177,56 @@ a:has(> .tile) {
     /*filter: invert(1);*/
     filter: hue-rotate(360deg);
   }
+}
+
+/* media-content */
+.media-content {
+  --toc-width: 20%;
+  --toc-collapse-width: 4em;
+  --_media-content-height: var(--media-content-height, 50vh);
+  position: relative;
+  min-height: var(--_media-content-height);
+  border: solid 1px var(--clr-accent);
+}
+
+.content-table {
+  position: absolute;
+  width: var(--toc-width);
+  height: 100%;
+  overflow: auto;
+  color: var(--clr-primary);
+  background-image: linear-gradient(180deg, var(--clr-body) 0%, var(--clr-accent) 70%);
+  padding-inline: var(--size-100);
+}
+
+.content {
+  margin-left: var(--toc-width);
+  min-height: var(--media-content-height);
+}
+
+.media-content:has(input[type=checkbox].content-table-controller:checked) {
+  --toc-width: var(--toc-collapse-width);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  /* grid-template-rows: auto 1fr; */
+}
+
+.content-page {
+  min-height: calc(var(--_media-content-height) - var(--size-700));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-navigator {
+  display: flex;
+  gap: 0.25em;
+  justify-content: center;
+  align-items: center;
+  padding-block: var(--size-300);
+  background-color: var(--clr-secondary);
 }
