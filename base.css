@@ -1181,8 +1181,8 @@ a:has(> .tile) {
 
 /* media-content */
 .media-content {
-  --toc-width: 20%;
-  --toc-collapse-width: 4em;
+  --_toc-width: var(--toc-width, 20%);
+  --_toc-collapse-width: var(--toc-collapse-width, 3em);
   --_media-content-height: var(--media-content-height, 50vh);
   position: relative;
   min-height: var(--_media-content-height);
@@ -1191,7 +1191,7 @@ a:has(> .tile) {
 
 .content-table {
   position: absolute;
-  width: var(--toc-width);
+  width: var(--_toc-width);
   height: 100%;
   overflow: auto;
   color: var(--clr-primary);
@@ -1200,12 +1200,12 @@ a:has(> .tile) {
 }
 
 .content {
-  margin-left: var(--toc-width);
-  min-height: var(--media-content-height);
+  margin-left: var(--_toc-width);
+  min-height: var(--_media-content-height);
 }
 
 .media-content:has(input[type=checkbox].content-table-controller:checked) {
-  --toc-width: var(--toc-collapse-width);
+  --toc-width: var(--_toc-collapse-width);
 }
 
 .content-wrapper {
