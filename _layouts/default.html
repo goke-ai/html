@@ -2,42 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <section class="primary-layout flex">
-        {% include drawer.html %}
+  <section class="primary-layout flex">
+    {% include drawer.html %}
 
-        <section class="page">
-            <header>
-                {% include navigation.html %}
-            </header>
+    <section class="page">
+      <header>
+        {% include navigation.html %}
+      </header>
 
-            <main>
-                <div class="wrapper flow">
-                    {{ content }}
-                </div>
-            </main>
+      <main>
+        <div class="wrapper flow">
+          {{ content }}
+        </div>
+      </main>
 
-            <footer>
-                <div class="footer-wrapper">
-                    <span class="icon"><span>&#9818</span></span>
-                    <span class="icon"><span>&#9812</span></span>
-                    <span class="icon"><span>&#9962</span></span>
-                </div>
-            </footer>
+      <footer>
+        <div class="footer-wrapper">
+          <span class="icon"><span>&#9818</span></span>
+          <span class="icon"><span>&#9812</span></span>
+          <span class="icon"><span>&#9962</span></span>
+        </div>
+      </footer>
 
-        </section>
     </section>
+  </section>
 
-    {% include sidebar.html %}
+  {% include sidebar.html %}
 
-    <script src="assets/js/base.js"></script>
-    <script src="assets/js/script.js"></script>
+  <script src="assets/js/base.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
