@@ -6,6 +6,9 @@
   <label class="navbar-controller navbar-controller-label" for="navbar-controller"><span class="icon"></span></label>
 
   <ul class="primary-nav-list flex">
+    {% for item in site.data.navigation %}
+    <li><a href="{{ item.link }}" {% if page.url==item.link %}class="current" {% endif %}>{{ item.name }}</a></li>
+    {% endfor %}
     <li><a href="./">Home <span>🏡</span></a></li>
     <li><a href="contact.html">Contact</a></li>
     <li class="dropdown"><a href="#">Account</a>
@@ -18,9 +21,12 @@
     <li class="dropdown"><a class="active" href="#">Componets Menu Four</a>
       <ul class="dropdown-list pop-down-left">
         <li><a href="contact.html">Forms</a></li>
-        <li><a href="components.html">Components</a></li>
+        <li><a class="active" href="components.html">Components</a></li>
         <li><a href="#">Sub Menu3 Menu X3</a></li>
       </ul>
     </li>
   </ul>
+
+
+
 </nav>

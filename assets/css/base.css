@@ -798,6 +798,7 @@ button:has(.icon:only-child) {
   display: block;
 }
 
+/* wizard and carousel */
 .wizard,
 .carousel {
   color: var(--clr-text);
@@ -811,12 +812,13 @@ button:has(.icon:only-child) {
 }
 
 .wizard {
-  --wizard-height: 50vh;
-  min-height: var(--wizard-height);
+  --_wizard-height: var(--wizard-height, 50vh);
+  min-height: var(--_wizard-height);
 }
 
 .carousel {
-  min-height: 20vh;
+  --_carousel-height: var(--carousel-height, 20vh);
+  min-height: var(--_carousel-height);
 }
 
 .wizard-body,
@@ -824,13 +826,17 @@ button:has(.icon:only-child) {
   height: 100%;
 }
 
-.wizard-item {
-  height: calc(var(--wizard-height) * 0.9);
+.wizard-page {
+  height: calc(var(--_wizard-height) * 0.9);
   overflow-y: auto;
 }
 
-.wizard-item,
-.carousel-item,
+.carousel-page {
+  height: var(--_carousel-height);
+}
+
+.wizard-page,
+.carousel-page,
 .wizard-controller,
 .carousel-controller {
   padding: var(--size-300) var(--size-600);
@@ -838,7 +844,8 @@ button:has(.icon:only-child) {
 
 .wizard-controller,
 .wizard-controller>*,
-.carousel-controller {
+.carousel-controller,
+.carousel-controller>* {
   display: flex;
   gap: 0.25em;
   justify-content: center;
@@ -847,24 +854,25 @@ button:has(.icon:only-child) {
   background-color: var(--clr-accent);
 }
 
-.wizard-controller {
+.wizard-controller,
+.carousel-controller {
   flex-direction: column;
 }
 
 
-.wizard-item:nth-child(odd),
-.carousel-item:nth-child(odd) {
+.wizard-page:nth-child(odd),
+.carousel-page:nth-child(odd) {
   background-color: var(--clr-body-bg);
 }
 
-.wizard-item:nth-child(even),
-.carousel-item:nth-child(even) {
+.wizard-page:nth-child(even),
+.carousel-page:nth-child(even) {
   background-color: var(--clr-card-bg);
   /*text-align: center;*/
 }
 
-.wizard-item,
-.carousel-item {
+.wizard-page,
+.carousel-page {
   display: none;
 }
 
@@ -874,28 +882,35 @@ button:has(.icon:only-child) {
   display: none;
 }
 
-.wizard-controller input {
+.wizard-controller input,
+.carousel-controller input {
   outline-color: var(--clr-body-bg);
 }
 
-.wizard-page-controller-label span {
+.wizard-page-controller-label span,
+.carousel-page-controller-label span {
   display: none;
 }
 
-.wizard-page-controller-label input[type=radio] {
+.wizard-page-controller-label input[type=radio],
+.carousel-page-controller-label input[type=radio] {
   display: none;
 }
 
-.wizard-controller:has(.show-text) .wizard-page-controller-label span {
+.wizard-controller:has(.show-text) .wizard-page-controller-label span,
+.carousel-controller:has(.show-text) .carousel-page-controller-label span {
   display: block;
 }
 
-.wizard-controller:has(.show-radio) .wizard-page-controller-label input[type=radio] {
+.wizard-controller:has(.show-radio) .wizard-page-controller-label input[type=radio],
+.carousel-controller:has(.show-radio) .carousel-page-controller-label input[type=radio] {
   display: block;
 }
 
 .wizard-controller input:checked,
-.wizard-controller label:has(input:checked) {
+.wizard-controller label:has(input:checked),
+.carousel-controller input:checked,
+.carousel-controller label:has(input:checked) {
   color: var(--clr-body);
   outline-color: var(--clr-body);
 }
@@ -915,29 +930,27 @@ button:has(.icon:only-child) {
   display: block;
 }
 
-.wizard:has(.wizard-controller-labels label:nth-child(1)>input:checked) .wizard-item:nth-child(1),
-.wizard:has(.wizard-controller-labels label:nth-child(2)>input:checked) .wizard-item:nth-child(2),
-.wizard:has(.wizard-controller-labels label:nth-child(3)>input:checked) .wizard-item:nth-child(3),
-.wizard:has(.wizard-controller-labels label:nth-child(4)>input:checked) .wizard-item:nth-child(4),
-.wizard:has(.wizard-controller-labels label:nth-child(5)>input:checked) .wizard-item:nth-child(5),
-.wizard:has(.wizard-controller-labels label:nth-child(6)>input:checked) .wizard-item:nth-child(6),
-.wizard:has(.wizard-controller-labels label:nth-child(7)>input:checked) .wizard-item:nth-child(7),
-.wizard:has(.wizard-controller-labels label:nth-child(8)>input:checked) .wizard-item:nth-child(8),
-.wizard:has(.wizard-controller-labels label:nth-child(9)>input:checked) .wizard-item:nth-child(9),
-.wizard:has(.wizard-controller-labels label:nth-child(10)>input:checked) .wizard-item:nth-child(10) {
-  display: block;
-}
+.wizard:has(.wizard-controller-labels label:nth-child(1)>input:checked) .wizard-page:nth-child(1),
+.wizard:has(.wizard-controller-labels label:nth-child(2)>input:checked) .wizard-page:nth-child(2),
+.wizard:has(.wizard-controller-labels label:nth-child(3)>input:checked) .wizard-page:nth-child(3),
+.wizard:has(.wizard-controller-labels label:nth-child(4)>input:checked) .wizard-page:nth-child(4),
+.wizard:has(.wizard-controller-labels label:nth-child(5)>input:checked) .wizard-page:nth-child(5),
+.wizard:has(.wizard-controller-labels label:nth-child(6)>input:checked) .wizard-page:nth-child(6),
+.wizard:has(.wizard-controller-labels label:nth-child(7)>input:checked) .wizard-page:nth-child(7),
+.wizard:has(.wizard-controller-labels label:nth-child(8)>input:checked) .wizard-page:nth-child(8),
+.wizard:has(.wizard-controller-labels label:nth-child(9)>input:checked) .wizard-page:nth-child(9),
+.wizard:has(.wizard-controller-labels label:nth-child(10)>input:checked) .wizard-page:nth-child(10),
 
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(1)) .carousel-item:nth-child(1),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(2)) .carousel-item:nth-child(2),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(3)) .carousel-item:nth-child(3),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(4)) .carousel-item:nth-child(4),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(5)) .carousel-item:nth-child(5),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(6)) .carousel-item:nth-child(6),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(7)) .carousel-item:nth-child(7),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(8)) .carousel-item:nth-child(8),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(9)) .carousel-item:nth-child(9),
-.carousel:has(input[type=radio].carousel-page-controller:checked:nth-child(10)) .carousel-item:nth-child(10) {
+.carousel:has(.carousel-controller-labels label:nth-child(1)>input:checked) .carousel-page:nth-child(1),
+.carousel:has(.carousel-controller-labels label:nth-child(2)>input:checked) .carousel-page:nth-child(2),
+.carousel:has(.carousel-controller-labels label:nth-child(3)>input:checked) .carousel-page:nth-child(3),
+.carousel:has(.carousel-controller-labels label:nth-child(4)>input:checked) .carousel-page:nth-child(4),
+.carousel:has(.carousel-controller-labels label:nth-child(5)>input:checked) .carousel-page:nth-child(5),
+.carousel:has(.carousel-controller-labels label:nth-child(6)>input:checked) .carousel-page:nth-child(6),
+.carousel:has(.carousel-controller-labels label:nth-child(7)>input:checked) .carousel-page:nth-child(7),
+.carousel:has(.carousel-controller-labels label:nth-child(8)>input:checked) .carousel-page:nth-child(8),
+.carousel:has(.carousel-controller-labels label:nth-child(9)>input:checked) .carousel-page:nth-child(9),
+.carousel:has(.carousel-controller-labels label:nth-child(10)>input:checked) .carousel-page:nth-child(10) {
   display: block;
 }
 

@@ -34,32 +34,36 @@ title: Components
       <div class="content">
         <div class="content-wrapper">
           <div class="content-page">
-            <video src="assets/medias/video1.mp4" controls></video>
+            <video width="1000" controls>
+              <source src="../assets/medias/video1.mp4" type="video/mp4">
+              <source src="../assets/medias/video1.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="content-navigator">
             <button type="button" class="default no-border" title="Search">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#angle-left"></use>
+                <use xlink:href="images/icons.svg#angle-left"></use>
               </svg>
             </button>
             <button type="button" class="default no-border" title="Search">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#pause"></use>
+                <use xlink:href="images/icons.svg#pause"></use>
               </svg>
             </button>
             <button type="button" class="default no-border" title="Search">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#play"></use>
+                <use xlink:href="images/icons.svg#play"></use>
               </svg>
             </button>
             <button type="button" class="default no-border" title="Search">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#stop"></use>
+                <use xlink:href="images/icons.svg#stop"></use>
               </svg>
             </button>
             <button type="button" class="default no-border" title="Search">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#angle-right"></use>
+                <use xlink:href="images/icons.svg#angle-right"></use>
               </svg>
             </button>
           </div>
@@ -73,14 +77,12 @@ title: Components
   <div class="card-header">Wizard</div>
   <div class="card-body" style="height: 60vh;">
     <!-- +wizard -->
-    <div class="wizard" style="--wizard-height: 50vh">
+    <div class="wizard" style="--wizard-height: 45vh">
       <div class="wizard-body">
-        <div class="wizard-item">
+        <div class="wizard-page">
           <h3>Header 1</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
           <form action="">
             <div class="form-row-">
@@ -100,24 +102,19 @@ title: Components
             </div>
           </form>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium dignissimos numquam dolores
-          labore modi aliquid harum quisquam iure tenetur similique molestias, quis fuga magnam minus
-          ratione
+          labore modi aliquid harum quisquam iure tenetur similique molestias, quis fuga magnam minus ratione
           unde optio sint odio! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
           dignissimos numquam dolores
-          labore modi aliquid harum quisquam iure tenetur similique molestias, quis fuga magnam minus
-          ratione
+          labore modi aliquid harum quisquam iure tenetur similique molestias, quis fuga magnam minus ratione
           unde optio sint odio! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
           dignissimos numquam dolores
-          labore modi aliquid harum quisquam iure tenetur similique molestias, quis fuga magnam minus
-          ratione
+          labore modi aliquid harum quisquam iure tenetur similique molestias, quis fuga magnam minus ratione
           unde optio sint odio!
         </div>
-        <div class="wizard-item">
+        <div class="wizard-page">
           <h3>Header 2</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
 
           <form action="">
@@ -132,28 +129,22 @@ title: Components
             </div>
           </form>
         </div>
-        <div class="wizard-item">
+        <div class="wizard-page">
           <h3>Header 3</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
         </div>
-        <div class="wizard-item">
+        <div class="wizard-page">
           <h3>Header 4</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
         </div>
-        <div class="wizard-item">
+        <div class="wizard-page">
           <h3>Header 5</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
         </div>
       </div>
@@ -182,7 +173,6 @@ title: Components
         </div>
       </div>
 
-
     </div>
     <!-- -wizard -->
 
@@ -192,57 +182,54 @@ title: Components
 
 <div class="card-secondary">
   <div class="card-header">Carousel</div>
-  <div class="card-body">
+  <div class="card-body" style="height: 30em;">
 
     <!-- +carousel -->
-    <div class="carousel">
-
+    <div class="carousel" style="--carousel-height: 20em">
       <div class="carousel-body">
-
-        <div class="carousel-item">
+        <div class="carousel-page">
           <h3>Header 1</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
         </div>
 
-        <div class="carousel-item">
+        <div class="carousel-page">
           <h3>Header 2</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
         </div>
 
-        <div class="carousel-item">
+        <div class="carousel-page">
           <h3>Header 3</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque
-          nesciunt
-          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste
-          quibusdam,
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias obcaecati facere nemo itaque nesciunt
+          odio autem provident praesentium facilis at dolore doloremque soluta esse expedita iste quibusdam,
           recusandae cupiditate sit?
         </div>
 
       </div>
 
       <div class="carousel-controller">
-        <input type="radio" name="carousel-page" id="carouselpage1" class="carousel-page-controller" checked>
-        <input type="radio" name="carousel-page" id="carouselpage2" class="carousel-page-controller">
-        <input type="radio" name="carousel-page" id="carouselpage3" class="carousel-page-controller">
-
+        <div class="carousel-controller-labels show-text show-radio">
+          <label class="carousel-page-controller-label">
+            <span>Page 1</span>
+            <input type="radio" name="carousel-page" id="carouselpage1" class="carousel-page-controller" checked>
+          </label>
+          <label class="carousel-page-controller-label">
+            <span>Page 2</span>
+            <input type="radio" name="carousel-page" id="carouselpage2" class="carousel-page-controller">
+          </label>
+          <label class="carousel-page-controller-label">
+            <span>Page 3</span>
+            <input type="radio" name="carousel-page" id="carouselpage3" class="carousel-page-controller">
+          </label>
+        </div>
       </div>
-
     </div>
     <!-- -carousel -->
 
@@ -317,16 +304,14 @@ title: Components
               Dialog Title
               <button type="button" class="default no-border" title="Close" @onclick="Cancel">
                 <svg class="icon">
-                  <use xlink:href="./assets/images/icons.svg#xmark-solid"></use>
+                  <use xlink:href="./images/icons.svg#xmark-solid"></use>
                 </svg>
               </button>
             </div>
             <div class="dialog-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vel tempora perferendis
-              hic
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vel tempora perferendis hic
               eum!
-              Est culpa necessitatibus cumque ex blanditiis corporis suscipit sit enim quis eos, iusto
-              quasi
+              Est culpa necessitatibus cumque ex blanditiis corporis suscipit sit enim quis eos, iusto quasi
               debitis laborum!
               <div>
                 <div class="tile">Refresh! to close.</div>
@@ -337,7 +322,6 @@ title: Components
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -436,11 +420,11 @@ title: Components
       <div class="tile">
         Student Courses
         <div class="tile-note" style="
-            --_width: 3.5em;
-            --_height: 3em;
-            --_top: 50%; 
-            --_right: 0%;
-            ">
+          --_width: 3.5em;
+          --_height: 3em;
+          --_top: 50%; 
+          --_right: 0%;
+          ">
           100
         </div>
       </div>
@@ -450,10 +434,10 @@ title: Components
       Program Student Courses
       <a href="#">
         <div class="tile-note" style="
-            --_height: 3.5em;
-            --_top: 70%; 
-            --_right: 100%;
-            ">
+          --_height: 3.5em;
+          --_top: 70%; 
+          --_right: 100%;
+          ">
           1000
         </div>
       </a>
@@ -462,7 +446,7 @@ title: Components
 </div>
 
 <div class="card">
-  <img src="assets/images/background.jpg" alt="">
+  <img src="images/background.jpg" alt="">
   <div class="card-body">
     at maiores fugit quam eum illo obcaecati temporibus laudantium earum dolore ab quis? Impedit
     illum praesentium eligendi?
@@ -470,7 +454,7 @@ title: Components
 </div>
 
 <div class="card-secondary">
-  <img src="assets/images/planets-collide-wide-wallpaper-22488.jpg" alt="">
+  <img src="images/planets-collide-wide-wallpaper-22488.jpg" alt="">
   <div class="card-body">
     Quis saepe error consequatur dicta distinctio minima asperiores sunt? Consequuntur incidunt
     adipisci eius numquam omnis corporis qui ab! Magni incidunt, eius dignissimos placeat
@@ -590,7 +574,7 @@ title: Components
             <button type="button" class="default no-border" title="Search">
               <label for="opensearch1">
                 <svg class="icon">
-                  <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                  <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
                 </svg>
                 <input type="checkbox" id="opensearch1">
               </label>
@@ -604,7 +588,7 @@ title: Components
             <button type="button" class="default no-border" title="Search">
               <label for="opensearch2">
                 <svg class="icon">
-                  <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                  <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
                 </svg>
                 <input type="checkbox" id="opensearch2">
               </label>
@@ -618,7 +602,7 @@ title: Components
             <button type="button" class="default no-border" title="Search">
               <label for="opensearch3">
                 <svg class="icon">
-                  <use xlink:href="assets/images/icons.svg#bars-solid"></use>
+                  <use xlink:href="images/icons.svg#bars-solid"></use>
                 </svg>
                 <input type="checkbox" id="opensearch3">
               </label>
@@ -632,7 +616,7 @@ title: Components
             <button type="button" class="default no-border" title="Search">
               <label for="opensearch4">
                 <svg class="icon">
-                  <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                  <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
                 </svg>
                 <input type="checkbox" id="opensearch4">
               </label>
@@ -646,7 +630,7 @@ title: Components
             <button type="button" class="default no-border" title="Search">
               <label for="opensearch5">
                 <svg class="icon">
-                  <use xlink:href="assets/images/icons.svg#bars-solid"></use>
+                  <use xlink:href="images/icons.svg#bars-solid"></use>
                 </svg>
                 <input type="checkbox" id="opensearch5">
               </label>
@@ -863,7 +847,7 @@ title: Components
           <button type="button" class="default no-border" title="Search">
             <label for="opensearchHeader1">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
               </svg>
               <input type="checkbox" id="opensearchHeader1">
             </label>
@@ -877,7 +861,7 @@ title: Components
           <button type="button" class="default no-border" title="Search">
             <label for="opensearchHeader2">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
               </svg>
               <input type="checkbox" id="opensearchHeader2">
             </label>
@@ -891,7 +875,7 @@ title: Components
           <button type="button" class="default no-border" title="Search">
             <label for="opensearchHeader3">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
               </svg>
               <input type="checkbox" id="opensearchHeader3">
             </label>
@@ -905,7 +889,7 @@ title: Components
           <button type="button" class="default no-border" title="Search">
             <label for="opensearchHeader4">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
               </svg>
               <input type="checkbox" id="opensearchHeader4">
             </label>
@@ -919,7 +903,7 @@ title: Components
           <button type="button" class="default no-border" title="Search">
             <label for="opensearchHeader5">
               <svg class="icon">
-                <use xlink:href="assets/images/icons.svg#magnifying-glass-solid"></use>
+                <use xlink:href="images/icons.svg#magnifying-glass-solid"></use>
               </svg>
               <input type="checkbox" id="opensearchHeader5">
             </label>
