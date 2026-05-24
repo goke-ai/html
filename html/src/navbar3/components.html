@@ -37,7 +37,7 @@
                       class="nav-item-text">Drawer Link
                       3</span></span></a></li>
               <li><a href="#"><span class="nav-item-wrapper"><span class="icon">X</span><span
-                      class="nav-item-text">Drawer Link
+                      class="nav-item-text">Drawer Very Long Word Link
                       4</span></span></a></li>
               <li><a href="#"><span class="nav-item-wrapper"><span class="icon">X</span><span
                       class="nav-item-text">Drawer Link
@@ -52,8 +52,9 @@
     <section class="page">
       <header>
         <nav class="primary-navigation flex">
-          <div class="logo"><span class="icon">LOGO</span></div>
-
+          <a href="/">
+            <div class="logo"><span class="icon">LOGO</span></div>
+          </a>
           <input type="checkbox" class="navbar-controller navbar-controller-checkbox" name="navbar-controller"
             id="navbar-controller">
           <label class="navbar-controller navbar-controller-label" for="navbar-controller"><span
@@ -88,7 +89,19 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est nesciunt, cum fugit veniam
             animi in
             modi perspiciatis? Aliquid officia eaque aliquam eveniet eum illum in nihil similique amet at.
+
+            <br />
+            <a href="https://goke.me">https://goke.me </a>
           </p>
+
+          <div class="card .max-screen">
+            <div class="card-header">Max Screen</div>
+            <div class="card-body">
+              Add class <i>'max-screen'</i> to any element on the Page. The page become max-screen with no padding nor
+              page centered.
+
+            </div>
+          </div>
 
           <div class="card">
             <div class="card-header">Media content</div>
@@ -172,7 +185,7 @@
                       <div class="form-row-">
                         <input type="radio" name="gender" id="male">
                         <input type="radio" name="gender" id="female">
-                        <input type="text">
+                        <input type="text" value="disabled" disabled>
                       </div>
                       <div class="form-row-">
                         <input type="radio" name="gender" id="male">
@@ -201,7 +214,7 @@
                         <label for="name">Name</label> <input type="text" id="name">
                       </div>
                       <div class="form-row-">
-                        <label for="name">Name</label> <input type="text" id="name">
+                        <label for="name">Name</label> <input type="text" id="name" value="disabled" disabled>
                       </div>
                       <div class="form-row-">
                         <label for="name">Name</label> <input type="text" id="name">
@@ -647,7 +660,7 @@
           </div>
 
           <div class="card">
-            <div class="card-header">Table</div>
+            <div class="card-header">Table with Search and Sort</div>
             <div class="card-body">
               <table class="mobile-col-2 mobile-col-5 mobile-col-6" style="--_clr-icon-fg: var(--clr-accent);">
                 <thead>
@@ -661,7 +674,9 @@
                           <input type="checkbox" id="opensearch1">
                         </label>
                       </button>
-                      <a>Header 1</a>
+                      <span class="sort">
+                        Header 1 <span>&#x2b9f;</span> <span>&#x2b9d;</span>
+                      </span>
                       <div class="search">
                         <input type="text" placeholder="Search Header 1">
                       </div>
@@ -675,7 +690,9 @@
                           <input type="checkbox" id="opensearch2">
                         </label>
                       </button>
-                      <a>Header 2</a>
+                      <span class="sort">
+                        Header 2 <span>&#x2b9f;</span> <span>&#x2b9d;</span>
+                      </span>
                       <div class="search">
                         <input type="text" placeholder="Search Header 2">
                       </div>
@@ -689,7 +706,9 @@
                           <input type="checkbox" id="opensearch3">
                         </label>
                       </button>
-                      <a>Header 3</a>
+                      <span class="sort">
+                        Header 3 <span>&#x2b9f;</span> <span>&#x2b9d;</span>
+                      </span>
                       <div class="search">
                         <input type="text" placeholder="Search Header 3">
                       </div>
@@ -703,7 +722,9 @@
                           <input type="checkbox" id="opensearch4">
                         </label>
                       </button>
-                      <a>Header 4</a>
+                      <span class="sort">
+                        Header 4 <span>&#x2b9f;</span> <span>&#x2b9d;</span>
+                      </span>
                       <div class="search">
                         <input type="text" placeholder="Search Header 4">
                       </div>
@@ -717,7 +738,9 @@
                           <input type="checkbox" id="opensearch5">
                         </label>
                       </button>
-                      <a>Header 5</a>
+                      <span class="sort">
+                        Header 5 <span>&#x2b9f;</span> <span>&#x2b9d;</span>
+                      </span>
                       <div class="search">
                         <input type="text" placeholder="Search Header 5">
                       </div>
@@ -1079,6 +1102,11 @@
               </div>
 
               <div class="form-row">
+                <label for="name">Disabled Name</label>
+                <input type="text" id="disabledname" name="disabledname" value="Disabled Name" required disabled>
+              </div>
+
+              <div class="form-row">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
               </div>
@@ -1147,9 +1175,15 @@
 
       <footer>
         <div class="footer-wrapper">
-          <span class="icon"><span>&#9818</span></span>
-          <span class="icon"><span>&#9812</span></span>
-          <span class="icon"><span>&#9962</span></span>
+          <span class="icon" style="--_clr-icon-fg: red;"><span>&#9818;</span></span>
+          <span class="icon"><span>&#9812;</span></span>
+          <span class="icon"><span>&#9962;</span></span>
+          <span class="icon" style="--_clr-icon-fg: red;"><span>&#x1F3B2;</span></span>
+          <span class="icon" style="--_clr-icon-fg: red;"><span>&#x2658;</span></span>
+          <span class="icon" style="--_clr-icon-fg: red;"><span>&#x265E;</span></span>
+          <span class="icon"><span>&#x2714;</span></span>
+          <span class="icon"><span>&#x274C;</span></span>
+          <span class="icon"><span>&#x2796;</span></span>
         </div>
       </footer>
 
@@ -1271,8 +1305,8 @@
     </div>
   </aside>
 
-  <script src="../assets/js/base.js"></script>
-  <script src="../assets/js/script.js"></script>
+  <script src="../../assets/js/base.js"></script>
+  <script src="../../assets/js/script.js"></script>
 
 </body>
 
