@@ -1,22 +1,22 @@
 <!doctype html>
-<html lang="en" class="green">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>flyout-nav-site</title>
+  <title>Components</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
   <header class="primary-header">
-    <div class="container navbar-container no-outline">
-      <div class="navbar-wrapper no-outline">
-        <a href="/" class="navbar-logo">Logo</a>
+    <div class="navbar-container no-outline">
+      <div class="navbar container-fluid no-outline">
+        <a href="/" class="navbar-brand">Components</a>
 
-        <input type="checkbox" class="mobile-nav-toggle" id="mobile-nav-toggle">
-        <label for="mobile-nav-toggle" class="mobile-nav-toggle-icons" aria-controls="primary-navigation">
+        <input type="checkbox" class="navbar-toggler" id="navbar-toggler">
+        <label for="navbar-toggler" class="navbar-toggler-icons" aria-controls="primary-navigation">
           <span class="sr-only">Menu</span>
           <svg class="menu-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -62,21 +62,22 @@
   </header>
   <main>
     <section>
-      <div class="container">
+      <div class="container-fluid">
         <h3>Section #1</h3>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
         <a href="section-1.url">Section 1 More</a>
-        <div class="column-num-1">
+        <div class="columns-1">
           <div class="screen"></div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <h3>Section #2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-        <a href="section-2.url">Section 2 More</a>
-        <div class="column-num-1-auto">
+        <div class="auto-grid">
+          <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+
+          </div>
           <div>
             <button class="primary">Primary Button</button>
             <button class="secondary">Secondary Button</button>
@@ -84,13 +85,44 @@
             <button class="contrast">Contrast Button</button>
             <button class="harmony">Harmony Button</button>
           </div>
-          <div></div>
-          <div></div>
         </div>
       </div>
     </section>
     <section>
-      <div class="container">
+      <div class="container-fluid">
+        <h3>Section #2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <a href="section-2.url">Section 2 More</a>
+        <div class="columns-1-auto">
+          <div>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="auto-grid">
+          <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.</p>
+          </div>
+          <div>
+            <button class="primary">Primary Button</button>
+            <button class="secondary">Secondary Button</button>
+            <button class="accent">Accent Button</button>
+            <button class="contrast">Contrast Button</button>
+            <button class="harmony">Harmony Button</button>
+          </div>
+          <div>
+            Empty
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid">
         <h3>Section #3</h3>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
         <a href="section-3.url">Section 3 More</a>
@@ -98,10 +130,48 @@
           <div></div>
           <div></div>
         </div>
+        <div class="auto-grid">
+          <form>
+            <input type="text" value="" placeholder="Text" />
+            <br />
+            <input type="password" value="Password" placeholder="Password" />
+            <br />
+            <input type="button" value="Button" />
+            <br />
+            <input type="button" value="Button" />
+            <br />
+            <input type="checkbox" />
+            <input type="radio" value="radio1" name="radio" />
+            <input type="checkbox" />
+             <br />
+            <input type="radio" value="radio1" name="radio" />
+            <input type="radio" value="radio2" name="radio" />
+            <input type="checkbox" />
+            <br />
+            <input type="button" value="Button" />
+            <br />
+
+            <select>
+              <option>Select option</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+            <br />
+            <textarea rows="5" cols="100">
+
+         </textarea>
+            <br />
+
+          </form>
+
+
+
+        </div>
+
       </div>
     </section>
 
-    <div class="container">
+    <div class="container-fluid">
       <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
         <span class="sr-only">Menu</span>
         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -126,13 +196,14 @@
     </div>
   </main>
   <footer>
-    <div class="container">
+    <div class="container-fluid">
       <p>&copy; 2024 flyout-nav-site. All rights reserved.</p>
     </div>
   </footer>
 
 
-
+  <!-- <div id="app"></div> -->
+  <!-- <script type="module" src="/src/main.ts"></script> -->
 </body>
 
 </html>
