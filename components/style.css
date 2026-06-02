@@ -65,6 +65,7 @@
 /* test */
 div:not(.no-outline) {
   outline: 1px solid var(--color-accent, #ff6347);
+  padding: 0.1rem;
 }
 
 div:empty {
@@ -102,13 +103,12 @@ body {
   border: 0;
 }
 
-
-
 /* tags */
 input,
 button,
 textarea,
-select {
+select,
+.btn {
   margin-block: 0.1rem;
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
@@ -125,14 +125,15 @@ select {
 input[type="radio"],
 input[type="checkbox"] {
   appearance: none;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
   /*accent-color: var(--color-primary);*/
   background-color: var(--bg-color);
   cursor: pointer;
-  margin: 0.2rem 0.3rem;
+  margin-block: 0.3rem 0;
+  margin-inline: 0.3rem;
   padding: 0.2rem;
 }
 
@@ -140,16 +141,17 @@ input[type="radio"] {
   border-radius: 50%;
 }
 
-input[type="checkbox"] {
-}
-
 input:checked {
   background-color: var(--color-primary);
 }
 
+.btn {
+  display: inline-block;
+}
 
 button,
-.button {
+.button,
+.btn {
   --button-color: var(--color-primary);
   --l: 20%;
   background-color: hsl(from var(--button-color, black) h s l);
@@ -159,7 +161,9 @@ button,
   cursor: pointer;
 }
 
-button {
+button,
+.button,
+.btn {
   &.secondary {
     --button-color: var(--color-secondary, #ffd700);
     --l: 20%;
@@ -187,6 +191,89 @@ button {
   }
 }
 
+table, .table {
+  --table-color: var(--color-primary, #00ff00);
+  --table-header-bg-color: hsl(from var(--table-color, black) h s 10%);
+  --table-header-color: hsl(from var(--table-color, black) h s 95%);
+  --table-row-bg-color: hsl(from var(--table-color, black) h s 95%);
+  --table-row-color: hsl(from var(--table-color, black) h s 10%);
+  --table-row-bg-color-alt: hsl(from var(--table-color, black) h s 90%);
+  --table-line-color: hsl(from var(--table-color, black) h s 30%);
+
+  --border-width: 1px 1px 1px 1px;
+
+  background-color: var(--table-row-bg-color);
+  color: var(--table-row-color);
+
+  width: 100%;
+  border-collapse: collapse;
+  /* margin: var(--size-100); */
+
+  &.striped tbody tr:nth-child(even) {
+    background-color: var(--table-row-bg-color-alt);
+  }
+
+  &.no-bordered th,
+  &.no-bordered td {
+    --border-width: 0;
+  }
+
+  &.bordered-bottom th,
+  &.bordered-bottom td {
+    --border-width: 0 0 1px 0;
+  }
+
+  &.bordered-top th,
+  &.bordered-top td {
+    --border-width: 1px 0 0 0;
+  }
+
+  &.bordered-left th,
+  &.bordered-left td {
+    --border-width: 0 1px 0 1px;
+  }
+
+  &.bordered-right th,
+  &.bordered-right td {
+    --border-width: 0 1px 0 0;
+  }
+
+  &.bordered-vertical th,
+  &.bordered-vertical td {
+    --border-width: 0 1px 0 0;
+  }
+
+  &.bordered-horizontal th,
+  &.bordered-horizontal td {
+    --border-width: 0 0 1px 0;
+  }
+
+
+}
+
+th,
+td {
+  padding: var(--size-200);
+  text-align: left;
+  border: 1px solid var(--table-line-color);
+  border-width: var(--border-width);
+
+}
+
+th {
+  background-color: var(--table-header-bg-color);
+  color: var(--table-header-color);
+
+}
+
+tr:nth-child(even) td {
+  background-color: var(--table-row-bg-color-alt);
+}
+
+
+
+
+
 
 /* navigation */
 .navbar {
@@ -208,7 +295,7 @@ button {
 .primary-navigation ul {
   display: flex;
   gap: 0.5rem;
-  /*    justify-content:center;*/
+  /*    justify-content:center; */
   align-items: center;
 }
 
@@ -232,7 +319,6 @@ button {
   background-color: var(--color-accent, #00ff00);
   border: 2px solid var(--color-neutral-light, #f5f5f5);
 }
-
 
 .primary-navigation li ul {
   position: absolute;
@@ -333,7 +419,7 @@ button {
   display: grid;
   gap: clamp(1rem, 5vmax, 1.625rem);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-column-size)), 1fr));
-  padding-block: 0.25rem;
+  padding: 0.5rem;
 }
 
 
@@ -478,7 +564,7 @@ button {
     display: block;
   }
 
-  
+
 }
 
 /* extra large desktop */
@@ -488,7 +574,7 @@ button {
     display: block;
   }
 
-  
+
 }
 
 /* large desktop */
@@ -498,7 +584,7 @@ button {
     display: block;
   }
 
- 
+
 }
 
 /* desktop */
@@ -508,7 +594,7 @@ button {
     display: block;
   }
 
-  
+
 }
 
 /* laptop */
@@ -528,7 +614,7 @@ button {
     display: block;
   }
 
-  
+
 }
 
 /* mobile */
@@ -538,7 +624,7 @@ button {
     display: block;
   }
 
-  
+
 }
 
 /* medium mobile */
@@ -548,7 +634,7 @@ button {
     display: block;
   }
 
-  
+
 }
 
 /* small mobile */
